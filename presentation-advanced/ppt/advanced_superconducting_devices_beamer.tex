@@ -92,6 +92,35 @@
     \placeholderbox{#1}{#3}{#2}%
   }%
 }
+\newcommand{\meissnerfallback}{%
+  \begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+    \fill[SoftBlue!80,draw=Accent,line width=0.5pt] (1.25,0.95) circle (0.48);
+    \fill[SoftBlue!80,draw=Accent,line width=0.5pt] (4.05,0.95) circle (0.48);
+    \foreach \x in {0.55,0.82,1.09,1.36,1.63,1.90} {
+      \draw[Accent, line width=0.45pt, -{Latex[length=1.8mm]}] (\x,0.12) -- (\x,1.83);
+    }
+    \foreach \x in {3.15,3.42,4.68,4.95} {
+      \draw[Accent, line width=0.45pt, -{Latex[length=1.8mm]}] (\x,0.12) -- (\x,1.83);
+    }
+    \draw[Accent, line width=0.45pt, -{Latex[length=1.8mm]}]
+      (3.69,0.12) .. controls (3.58,0.55) and (3.58,1.35) .. (3.69,1.83);
+    \draw[Accent, line width=0.45pt, -{Latex[length=1.8mm]}]
+      (4.41,0.12) .. controls (4.52,0.55) and (4.52,1.35) .. (4.41,1.83);
+    \node[font=\tiny, text=Ink] at (1.25,-0.15) {$T>T_c$};
+    \node[font=\tiny, text=Ink] at (4.05,-0.15) {$T<T_c$};
+  \end{tikzpicture}%
+}
+\newcommand{\meissnervisual}[1][\linewidth]{%
+  \IfFileExists{../images/EffectMeisner.png}{%
+    \includegraphics[width=#1,height=1.65cm,keepaspectratio]{../images/EffectMeisner.png}%
+  }{%
+    \IfFileExists{../images/EffectMeisner.pdf}{%
+      \includegraphics[width=#1,height=1.65cm,keepaspectratio]{../images/EffectMeisner.pdf}%
+    }{%
+      \resizebox{#1}{!}{\meissnerfallback}%
+    }%
+  }%
+}
 
 \title[Superconducting Devices]{Advanced Superconducting Devices}
 \subtitle{From high-field action to ultra-sensitive quantum sensing}
@@ -139,63 +168,88 @@
 \column{0.45\textwidth}
 \centering
 \resizebox{\linewidth}{!}{%
-\begin{tikzpicture}[every node/.style={font=\small}]
-  \fill[SoftBlue!55, rounded corners=12pt] (-2.15,4.1) rectangle (2.15,5.05);
-  \draw[Accent, line width=1.1pt, rounded corners=12pt] (-2.15,4.1) rectangle (2.15,5.05);
-  \node[font=\bfseries, text=Ink] at (0,4.68) {Superconductivity};
-  \node[font=\scriptsize, text=Accent] at (0,4.34) {lossless transport + phase coherence};
+\begin{tikzpicture}[every node/.style={align=center,font=\scriptsize}]
+  \node[
+    rounded corners=10pt,
+    draw=Accent,
+    fill=SoftBlue!55,
+    very thick,
+    text=Ink,
+    minimum width=4.8cm,
+    minimum height=1.0cm
+  ] (core) at (0,4.8) {\textbf{Superconductivity}\\lossless transport + phase coherence};
 
-  \draw[Accent, line width=1.0pt] (0,4.08) -- (0,3.72);
-  \draw[Accent, line width=1.0pt] (-2.45,3.72) -- (2.45,3.72);
-  \draw[Accent, line width=1.0pt] (-1.45,3.72) -- (-1.45,3.45);
-  \draw[Accent, line width=1.0pt] (1.45,3.72) -- (1.45,3.45);
+  \node[
+    rounded corners=10pt,
+    draw=Signal,
+    fill=white,
+    thick,
+    text=Ink,
+    minimum width=3.25cm,
+    minimum height=1.55cm
+  ] (hf) at (-2.15,2.9) {\textbf{High-field route}\\large currents\\low dissipation};
 
-  \fill[white, rounded corners=12pt] (-3.25,1.75) rectangle (-0.15,3.45);
-  \draw[Signal, line width=1.1pt, rounded corners=12pt] (-3.25,1.75) rectangle (-0.15,3.45);
-  \fill[Signal!16, rounded corners=12pt] (-3.25,2.95) rectangle (-0.15,3.45);
-  \node[font=\bfseries, text=Signal] at (-1.7,3.18) {High-field route};
-  \node[font=\scriptsize, text=Ink, align=center] at (-1.7,2.56) {large currents\\low dissipation};
-  \fill[SoftGreen!60, rounded corners=9pt] (-2.6,1.98) rectangle (-0.8,2.38);
-  \draw[Signal, line width=0.9pt, rounded corners=9pt] (-2.6,1.98) rectangle (-0.8,2.38);
-  \node[font=\scriptsize\bfseries, text=Ink] at (-1.7,2.18) {Superconducting magnets};
+  \node[
+    rounded corners=10pt,
+    draw=Warm,
+    fill=white,
+    thick,
+    text=Ink,
+    minimum width=3.25cm,
+    minimum height=1.55cm
+  ] (sens) at (2.15,2.9) {\textbf{Sensing route}\\Josephson effect\\interference readout};
 
-  \fill[white, rounded corners=12pt] (0.15,1.75) rectangle (3.25,3.45);
-  \draw[Warm, line width=1.1pt, rounded corners=12pt] (0.15,1.75) rectangle (3.25,3.45);
-  \fill[Warm!16, rounded corners=12pt] (0.15,2.95) rectangle (3.25,3.45);
-  \node[font=\bfseries, text=Warm] at (1.7,3.18) {Sensing route};
-  \node[font=\scriptsize, text=Ink, align=center] at (1.7,2.56) {Josephson effect\\interference readout};
-  \fill[SoftOrange!65, rounded corners=9pt] (0.8,1.98) rectangle (2.6,2.38);
-  \draw[Warm, line width=0.9pt, rounded corners=9pt] (0.8,1.98) rectangle (2.6,2.38);
-  \node[font=\scriptsize\bfseries, text=Ink] at (1.7,2.18) {SQUIDs};
+  \node[
+    rounded corners=8pt,
+    draw=Signal,
+    fill=Signal!10,
+    thick,
+    text=Ink,
+    minimum width=3.25cm,
+    minimum height=0.8cm
+  ] (water) at (-2.15,1.1) {\textbf{Wastewater treatment}};
 
-  \draw[Signal, line width=1.0pt] (-1.7,1.75) -- (-1.7,1.15);
-  \draw[Warm, line width=1.0pt] (1.7,1.75) -- (1.7,1.5);
-  \draw[Warm, line width=1.0pt] (1.7,0.7) -- (1.7,0.42);
+  \node[
+    rounded corners=8pt,
+    draw=Warm,
+    fill=Warm!10,
+    thick,
+    text=Ink,
+    minimum width=3.25cm,
+    minimum height=0.8cm
+  ] (meg) at (2.15,1.5) {\textbf{MEG}};
 
-  \fill[Signal!10, rounded corners=9pt] (-2.95,0.35) rectangle (-0.45,1.15);
-  \draw[Signal, line width=0.9pt, rounded corners=9pt] (-2.95,0.35) rectangle (-0.45,1.15);
-  \node[font=\scriptsize\bfseries, text=Ink] at (-1.7,0.82) {Wastewater treatment};
-  \node[font=\tiny, text=Slate] at (-1.7,0.53) {magnetic separation};
+  \node[
+    rounded corners=8pt,
+    draw=Warm,
+    fill=Warm!10,
+    thick,
+    text=Ink,
+    minimum width=3.25cm,
+    minimum height=0.8cm
+  ] (metal) at (2.15,0.7) {\textbf{Buried-metal detection}};
 
-  \fill[Warm!10, rounded corners=9pt] (0.45,0.7) rectangle (2.95,1.5);
-  \draw[Warm, line width=0.9pt, rounded corners=9pt] (0.45,0.7) rectangle (2.95,1.5);
-  \node[font=\scriptsize\bfseries, text=Ink] at (1.7,1.17) {MEG};
-  \node[font=\tiny, text=Slate] at (1.7,0.88) {clinical biomagnetism};
+  \draw[-{Latex[length=2.4mm]}, thick, Accent] (core.south west) ++(0.7,0) -- (hf.north);
+  \draw[-{Latex[length=2.4mm]}, thick, Accent] (core.south east) ++(-0.7,0) -- (sens.north);
+  \draw[-{Latex[length=2.4mm]}, thick, Signal] (hf.south) -- (water.north);
+  \draw[-{Latex[length=2.4mm]}, thick, Warm] (sens.south) -- (meg.north);
+  \draw[-{Latex[length=2.4mm]}, thick, Warm] (sens.south) -- (metal.north);
 
-  \fill[Warm!10, rounded corners=9pt] (0.45,-0.1) rectangle (2.95,0.7);
-  \draw[Warm, line width=0.9pt, rounded corners=9pt] (0.45,-0.1) rectangle (2.95,0.7);
-  \node[font=\scriptsize\bfseries, text=Ink] at (1.7,0.37) {Buried-metal detection};
-  \node[font=\tiny, text=Slate] at (1.7,0.08) {low-frequency sensing};
+  \node[font=\tiny, text=Slate] at (-2.15,0.55) {magnetic separation};
+  \node[font=\tiny, text=Slate] at (2.15,0.12) {clinical and field magnetometry};
 \end{tikzpicture}
 }
 \end{columns}
 \end{frame}
 
 \begin{frame}{What makes a superconductor technologically useful?}
-\small
+\footnotesize
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.57\textwidth}
+\column{0.52\textwidth}
 \begin{itemize}
+  \setlength{\itemsep}{0.22em}
   \item \textbf{Zero resistance} allows persistent currents without macroscopic dissipation.
   \item \textbf{Meissner expulsion} shows that superconductivity is a true thermodynamic phase, not just perfect conductivity.
   \item In \textbf{type-II materials}, flux enters through quantized vortices between $H_{c1}$ and $H_{c2}$.
@@ -208,55 +262,69 @@
 \]
 \takeaway{The same material platform supports both strong magnetic action and precise magnetic control.}
 
-\column{0.43\textwidth}
+\column{0.48\textwidth}
+\centering
+\imageorplaceholder[0.94\linewidth]{../images/Superconductor_interactions_with_magnetic_field.png}{2.35cm}
 
+\vspace{0.05cm}
+\parbox{0.94\linewidth}{\centering\tiny\color{Slate}Type-I screening, vortex mixed state, and field penetration above $H_{c2}$.}
+
+\vspace{0.18cm}
+\meissnervisual[0.90\linewidth]
+
+\vspace{0.03cm}
+\parbox{0.94\linewidth}{\centering\tiny\color{Slate}Meissner effect: below $T_c$ the magnetic field is expelled.}
 \end{columns}
 \end{frame}
 
 \begin{frame}{Macroscopic phase and the Josephson effect}
 \small
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.55\textwidth}
+\column{0.60\textwidth}
 \begin{itemize}
-  \item The superconducting condensate is described by
-  \[
+  \item The superconducting state is described by a macroscopic wavefunction 
+  \[ 
   \psi(\mathbf{r}) = |\psi(\mathbf{r})| e^{i\theta(\mathbf{r})}
   \]
-  \item The phase $\theta$ controls current and magnetic response.
-  \item Two weakly coupled superconductors obey
-  \[
+  \item \textbf{Key idea: the phase $\theta$ is physical.}
+  \item A phase difference between two superconductors generates a supercurrent:
+  \[ 
   I_s = I_c \sin \varphi
-  \qquad
+  \]
+  \item An applied voltage changes the phase in time:
+  \[ 
   \frac{d\varphi}{dt} = \frac{2e}{\hbar}V
   \]
-  \item Flux changes phase, and phase becomes a measurable electrical signal.
 \end{itemize}
-\takeaway{This is the bridge from superconductivity as a material state to superconductivity as a sensor technology.}
+{\tiny\color{Slate}Phase difference $\rightarrow$ current \quad voltage $\rightarrow$ phase evolution}
 
-\column{0.45\textwidth}
+\column{0.52\textwidth}
 \centering
-\imageorplaceholder[\linewidth]{../images/squid-josephson.png}{6.15cm}
 \vspace{0.2cm}
-{\scriptsize\color{Slate}Josephson junctions are the key element for superconducting sensing.}
+\imageorplaceholder[0.75\linewidth]{../images/squid-josephson.png}{5.95cm}
+\vspace{0.05cm}
+\parbox{0.88\linewidth}{\centering
+{\tiny\color{Slate}Josephson junctions are the key element for \\ superconducting sensing.}
+}
 \end{columns}
 \end{frame}
 
 \begin{frame}{SQUID: flux-to-voltage transducer}
 \small
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.56\textwidth}
+\column{0.52\textwidth}
 \begin{itemize}
-  \item A DC-SQUID is a superconducting loop interrupted by two Josephson junctions.
-  \item Flux quantization makes the critical current periodic in $\Phi/\Phi_0$.
+  \item A DC-SQUID is a superconducting loop with two Josephson junctions.
+  \item Magnetic flux changes the phase around the loop.
+  \item This modifies the maximum supercurrent the device can carry.
   \item In first approximation,
   \[
   I_c(\Phi) \simeq 2 I_0 \left|\cos\!\left(\pi\frac{\Phi}{\Phi_0}\right)\right|
   \]
-  \item With readout electronics, the device becomes an exceptionally sensitive magnetometer.
-  \item This is the natural bridge from theory to applications.
+  \item Electronics convert this modulation into a measurable voltage signal.
 \end{itemize}
 
-\column{0.44\textwidth}
+\column{0.48\textwidth}
 \begin{tikzpicture}[every node/.style={font=\scriptsize}]
   \draw[rounded corners=8pt, fill=white, draw=Accent, thick] (0,0) rectangle (5.2,5.8);
   \node[font=\small\bfseries, text=Accent] at (2.6,5.35) {DC-SQUID};
@@ -276,9 +344,29 @@
   \draw[Slate, thick] (0.55,0.9) -- (4.75,0.9);
   \draw[Slate, thick] (0.55,0.9) -- (0.55,2.1);
   \draw[Warm, thick, samples=100, domain=0.6:4.7, smooth] plot (\x,{1.5 + 0.45*sin(deg(4.2*(\x-0.6)))});
-  \node[text width=3.8cm, align=center] at (2.65,2.15) {$V(\Phi)$ is periodic, so tiny magnetic-flux changes become readable voltage modulation.};
+  \node[text width=3.35cm, align=center] at (2.65,2.15) {$V(\Phi)$ is periodic, so tiny
+magnetic-flux changes become readable voltage modulation.};
 \end{tikzpicture}
+\takeaway{Magnetic flux is converted into voltage through quantum interference.}
 \end{columns}
+\end{frame}
+
+\begin{frame}{From phase to measurement (intuition)}
+\small
+\begin{itemize}
+  \item Magnetic field $\rightarrow$ magnetic flux through the loop
+  \item Flux $\rightarrow$ phase shift in the superconducting wavefunction
+  \item Phase shift $\rightarrow$ change in supercurrent (Josephson effect)
+  \item Supercurrent change $\rightarrow$ voltage modulation (readout electronics)
+\end{itemize}
+
+\vspace{0.4cm}
+
+\begin{block}{Big picture}
+A SQUID does not measure magnetic field directly: it translates it into phase, then into current, then into voltage.
+\end{block}
+
+\takeaway{This chain is what makes quantum interference usable as a practical sensor.}
 \end{frame}
 
 \begin{frame}{Application 1: wastewater treatment by magnetic separation}
@@ -335,7 +423,7 @@ The superconductor is the actuator, not the sensor.
 \begin{frame}{Application 2: magnetoencephalography with SQUID arrays}
 \small
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.55\textwidth}
+\column{0.53\textwidth}
 \begin{itemize}
   \item MEG measures external brain magnetic fields that can be as small as $10^{-15}$ T.
   \item Whole-head systems use large SQUID arrays inside cryogenic dewars.
@@ -344,7 +432,7 @@ The superconductor is the actuator, not the sensor.
 \end{itemize}
 \takeaway{In this branch the limiting factor is not force, but the ability to read out extraordinarily weak fields non-invasively.}
 
-\column{0.45\textwidth}
+\column{0.47\textwidth}
 \centering
 % Expected image: meg-system.png
 \imageorplaceholder[\linewidth]{meg-system.png}{5.15cm}
@@ -354,7 +442,7 @@ The superconductor is the actuator, not the sensor.
 \begin{frame}{Application 3: buried-metal and landmine detection}
 \small
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.55\textwidth}
+\column{0.53\textwidth}
 \begin{itemize}
   \item A transmitter coil induces eddy currents in the buried metallic target.
   \item The target then emits a weak secondary magnetic field.
@@ -363,7 +451,7 @@ The superconductor is the actuator, not the sensor.
 \end{itemize}
 \takeaway{This is still the sensing branch, but now in a much noisier and less controlled environment than MEG.}
 
-\column{0.45\textwidth}
+\column{0.47\textwidth}
 \centering
 % Expected image: buried-metal-detection.png
 \imageorplaceholder[\linewidth]{buried-metal-detection.png}{5.15cm}
@@ -371,9 +459,10 @@ The superconductor is the actuator, not the sensor.
 \end{frame}
 
 \begin{frame}{One physics, three engineering targets}
-\scriptsize
+\tiny
 \renewcommand{\arraystretch}{1.35}
-\begin{tabular}{>{\raggedright\arraybackslash}p{2.8cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{2.6cm}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.45cm}>{\raggedright\arraybackslash}p{2.75cm}>{\raggedright\arraybackslash}p{3.35cm}>{\raggedright\arraybackslash}p{2.15cm}}
 \toprule
 \textbf{Application} & \textbf{Useful quantity} & \textbf{Why superconductivity helps} & \textbf{Main constraint} \\
 \midrule
@@ -389,7 +478,7 @@ Buried-metal detection & Weak secondary low-frequency field & Better low-frequen
 \begin{frame}{Limits and outlook}
 \small
 \begin{columns}[T,totalwidth=\textwidth]
-\column{0.5\textwidth}
+\column{0.49\textwidth}
 \begin{block}{Current limits}
 \begin{itemize}
   \item Cryogenic infrastructure
@@ -399,7 +488,7 @@ Buried-metal detection & Weak secondary low-frequency field & Better low-frequen
 \end{itemize}
 \end{block}
 
-\column{0.5\textwidth}
+\column{0.49\textwidth}
 \begin{block}{Where progress matters}
 \begin{itemize}
   \item Better HTS materials and devices
@@ -414,7 +503,7 @@ Buried-metal detection & Weak secondary low-frequency field & Better low-frequen
 \end{frame}
 
 \begin{frame}{Conclusion}
-\small
+\footnotesize
 \begin{itemize}
   \item Superconductivity is useful because it can either \textbf{create} magnetic fields efficiently or \textbf{detect} magnetic fields with quantum-level sensitivity.
   \item The theory block leads naturally to devices: Meissner response, phase coherence, Josephson effect, flux quantization, then SQUID operation.
@@ -426,7 +515,7 @@ Buried-metal detection & Weak secondary low-frequency field & Better low-frequen
 \end{frame}
 
 \begin{frame}[allowframebreaks]{References}
-\small
+\footnotesize
 \textbf{Course material}
 \begin{itemize}
   \item R. Arpaia, \textit{Lecture 4 - Superconductivity. Key Phenomena and Concepts}.
