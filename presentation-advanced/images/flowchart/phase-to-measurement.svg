@@ -1,0 +1,81 @@
+<svg width="2200" height="980" viewBox="0 0 2200 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="2200" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FAFC"/>
+      <stop offset="1" stop-color="#EEF3F7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#9FB2C1" flood-opacity="0.22"/>
+    </filter>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="13" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,12 L14,6 z" fill="#1E6277"/>
+    </marker>
+    <style>
+      .title { font: 700 46px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #23385E; }
+      .formula { font: 700 36px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #53657A; letter-spacing: 0.5px; }
+      .box-title { font: 700 34px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #22304F; }
+      .box-symbol { font: 700 44px 'Times New Roman', Georgia, serif; fill: #22304F; }
+      .box-sub { font: 500 24px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #66788E; }
+      .link { font: 600 23px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #687A8E; }
+      .note { font: 600 30px 'Aptos', 'Helvetica Neue', Arial, sans-serif; fill: #4A5D73; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="2200" height="980" fill="url(#bg)"/>
+
+  <text x="1100" y="108" text-anchor="middle" class="title">From Phase to Measurement</text>
+  <text x="1100" y="166" text-anchor="middle" class="formula">B → Φ → φ → Iₛ → V</text>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="290" width="340" height="230" rx="34" fill="#D8ECF6" stroke="#1E6277" stroke-width="8"/>
+    <rect x="520" y="290" width="340" height="230" rx="34" fill="#DDF5E9" stroke="#2E9D8F" stroke-width="8"/>
+    <rect x="930" y="290" width="340" height="230" rx="34" fill="#FDE6D8" stroke="#E9754A" stroke-width="8"/>
+    <rect x="1340" y="290" width="340" height="230" rx="34" fill="#D8ECF6" stroke="#1E6277" stroke-width="8"/>
+    <rect x="1750" y="290" width="340" height="230" rx="34" fill="#DDF5E9" stroke="#2E9D8F" stroke-width="8"/>
+  </g>
+
+  <g>
+    <text x="280" y="372" text-anchor="middle" class="box-title">Field</text>
+    <text x="280" y="432" text-anchor="middle" class="box-symbol">B</text>
+    <text x="280" y="482" text-anchor="middle" class="box-sub">incoming magnetic signal</text>
+
+    <text x="690" y="372" text-anchor="middle" class="box-title">Flux</text>
+    <text x="690" y="432" text-anchor="middle" class="box-symbol">Φ</text>
+    <text x="690" y="482" text-anchor="middle" class="box-sub">coupling through the loop</text>
+
+    <text x="1100" y="372" text-anchor="middle" class="box-title">Phase</text>
+    <text x="1100" y="432" text-anchor="middle" class="box-symbol">φ</text>
+    <text x="1100" y="482" text-anchor="middle" class="box-sub">interference in the SQUID</text>
+
+    <text x="1510" y="372" text-anchor="middle" class="box-title">Current</text>
+    <text x="1510" y="432" text-anchor="middle" class="box-symbol">Iₛ</text>
+    <text x="1510" y="482" text-anchor="middle" class="box-sub">Josephson response</text>
+
+    <text x="1920" y="372" text-anchor="middle" class="box-title">Voltage</text>
+    <text x="1920" y="432" text-anchor="middle" class="box-symbol">V</text>
+    <text x="1920" y="482" text-anchor="middle" class="box-sub">measured output signal</text>
+  </g>
+
+  <g stroke="#1E6277" stroke-width="8" marker-end="url(#arrow)">
+    <line x1="450" y1="405" x2="520" y2="405"/>
+    <line x1="860" y1="405" x2="930" y2="405"/>
+    <line x1="1270" y1="405" x2="1340" y2="405"/>
+    <line x1="1680" y1="405" x2="1750" y2="405"/>
+  </g>
+
+  <g>
+    <text x="485" y="610" text-anchor="middle" class="link">loop area</text>
+    <text x="895" y="610" text-anchor="middle" class="link">flux quantization</text>
+    <text x="1305" y="610" text-anchor="middle" class="link">Josephson interference</text>
+    <text x="1715" y="610" text-anchor="middle" class="link">readout electronics</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="360" y="710" width="1480" height="126" rx="28" fill="#FFFFFF" stroke="#1E6277" stroke-width="6"/>
+  </g>
+  <text x="1100" y="775" text-anchor="middle" class="note">
+    A SQUID measures voltage at the output, but that voltage is the end of a transduction chain
+  </text>
+
+  <text x="1100" y="906" text-anchor="middle" class="note">The physical signal starts as a magnetic field and is progressively converted into a readable electrical quantity</text>
+</svg>

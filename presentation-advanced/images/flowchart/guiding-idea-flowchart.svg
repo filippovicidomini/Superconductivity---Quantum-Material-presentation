@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400" role="img" aria-labelledby="title desc">
+  <title id="title">Guiding idea flowchart for superconducting devices</title>
+  <desc id="desc">A large presentation flowchart showing superconductivity branching into a high-field route and a sensing route, leading to wastewater treatment, magnetoencephalography, and buried-metal detection.</desc>
+
+  <defs>
+    <style>
+      .ink { fill: #14213D; }
+      .accent-stroke { stroke: #0F4C5C; }
+      .signal-stroke { stroke: #2A9D8F; }
+      .warm-stroke { stroke: #E76F51; }
+      .slate { fill: #5F6B7A; }
+
+      .core-box {
+        fill: #D8EEF2;
+        stroke: #0F4C5C;
+        stroke-width: 8;
+      }
+
+      .route-left {
+        fill: #FFFFFF;
+        stroke: #2A9D8F;
+        stroke-width: 7;
+      }
+
+      .route-right {
+        fill: #FFFFFF;
+        stroke: #E76F51;
+        stroke-width: 7;
+      }
+
+      .app-left {
+        fill: #D9F0EA;
+        stroke: #2A9D8F;
+        stroke-width: 6;
+      }
+
+      .app-right {
+        fill: #FBE0D9;
+        stroke: #E76F51;
+        stroke-width: 6;
+      }
+
+      .connector-accent {
+        fill: none;
+        stroke: #0F4C5C;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .connector-signal {
+        fill: none;
+        stroke: #2A9D8F;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .connector-warm {
+        fill: none;
+        stroke: #E76F51;
+        stroke-width: 7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .title-text {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        text-anchor: middle;
+      }
+
+      .subtitle-text {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+
+      .route-title {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+
+      .route-body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+
+      .app-title {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        text-anchor: middle;
+      }
+
+      .app-subtitle {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+
+      .footer-note {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        text-anchor: middle;
+        letter-spacing: 0.3px;
+      }
+    </style>
+  </defs>
+
+  <!-- Core -->
+  <rect class="core-box" x="770" y="120" width="860" height="210" rx="34" ry="34"/>
+  <text class="title-text ink" x="1200" y="205">Superconductivity</text>
+  <text class="subtitle-text slate" x="1200" y="272">lossless transport + phase coherence</text>
+
+  <!-- Routes -->
+  <rect class="route-left" x="330" y="510" width="710" height="250" rx="32" ry="32"/>
+  <text class="route-title ink" x="685" y="605">High-Field Route</text>
+  <text class="route-body slate" x="685" y="667">large currents</text>
+  <text class="route-body slate" x="685" y="715">low dissipation</text>
+
+  <rect class="route-right" x="1360" y="510" width="710" height="250" rx="32" ry="32"/>
+  <text class="route-title ink" x="1715" y="605">Sensing Route</text>
+  <text class="route-body slate" x="1715" y="667">Josephson effect</text>
+  <text class="route-body slate" x="1715" y="715">interference readout</text>
+
+  <!-- Applications -->
+  <rect class="app-left" x="405" y="1010" width="560" height="140" rx="24" ry="24"/>
+  <text class="app-title ink" x="685" y="1072">Wastewater Treatment</text>
+  <text class="app-subtitle slate" x="685" y="1122">magnetic separation</text>
+
+  <rect class="app-right" x="1050" y="1010" width="600" height="140" rx="24" ry="24"/>
+  <text class="app-title ink" x="1350" y="1062">Magnetoencephalography</text>
+  <text class="app-subtitle slate" x="1350" y="1110">(MEG)</text>
+
+  <rect class="app-right" x="1710" y="1010" width="520" height="140" rx="24" ry="24"/>
+  <text class="app-title ink" x="1970" y="1072">Buried-Metal Detection</text>
+  <text class="app-subtitle slate" x="1970" y="1122">field sensing</text>
+
+  <!-- Core split -->
+  <path class="connector-accent" d="M1200 330 L1200 420"/>
+  <path class="connector-accent" d="M685 420 L1715 420"/>
+  <circle cx="1200" cy="420" r="10" fill="#0F4C5C"/>
+
+  <!-- Accent arrows down to route boxes -->
+  <path class="connector-accent" d="M685 420 L685 510"/>
+  <polygon points="672,490 698,490 685,510" fill="#0F4C5C"/>
+
+  <path class="connector-accent" d="M1715 420 L1715 510"/>
+  <polygon points="1702,490 1728,490 1715,510" fill="#0F4C5C"/>
+
+  <!-- Left branch to wastewater -->
+  <path class="connector-signal" d="M685 760 L685 1010"/>
+  <polygon points="672,990 698,990 685,1010" fill="#2A9D8F"/>
+
+  <!-- Right branch split to two applications -->
+  <path class="connector-warm" d="M1715 760 L1715 900"/>
+  <path class="connector-warm" d="M1350 900 L1970 900"/>
+  <circle cx="1715" cy="900" r="10" fill="#E76F51"/>
+
+  <path class="connector-warm" d="M1350 900 L1350 1010"/>
+  <polygon points="1337,990 1363,990 1350,1010" fill="#E76F51"/>
+
+  <path class="connector-warm" d="M1970 900 L1970 1010"/>
+  <polygon points="1957,990 1983,990 1970,1010" fill="#E76F51"/>
+
+  <!-- Footer -->
+  <text class="footer-note slate" x="1200" y="1290">shared physics, different engineering targets</text>
+</svg>

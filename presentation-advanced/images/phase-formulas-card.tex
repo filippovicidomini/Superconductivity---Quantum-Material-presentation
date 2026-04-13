@@ -1,0 +1,42 @@
+\documentclass[border=10pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\definecolor{Ink}{HTML}{14213D}
+\definecolor{Accent}{HTML}{0F4C5C}
+\definecolor{Slate}{HTML}{5F6B7A}
+\definecolor{SoftBlue}{HTML}{D8EEF2}
+
+\begin{document}
+\fcolorbox{Accent}{SoftBlue!35}{%
+  \begin{minipage}{15.8cm}
+    \vspace{0.3cm}
+    {\Large\bfseries\color{Ink}Why phase matters}\par
+    \vspace{0.45cm}
+
+    {\large\bfseries\color{Accent}Macroscopic wavefunction}\par
+    \vspace{0.08cm}
+    {\Large\color{Ink}$\psi = |\psi|e^{i\theta}$}\par
+    \vspace{0.4cm}
+
+    {\large\bfseries\color{Accent}Josephson current}\par
+    \vspace{0.08cm}
+    {\Large\color{Ink}$I_s = I_c \sin \varphi$}\par
+    \vspace{0.4cm}
+
+    {\large\bfseries\color{Accent}Voltage-phase relation}\par
+    \vspace{0.08cm}
+    {\Large\color{Ink}$\dfrac{d\varphi}{dt} = \dfrac{2e}{\hbar}V$}\par
+    \vspace{0.35cm}
+
+    {\large\color{Slate}phase difference becomes observable}\par
+    \vspace{0.25cm}
+  \end{minipage}%
+}
+\end{document}

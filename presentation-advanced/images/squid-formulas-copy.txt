@@ -1,0 +1,49 @@
+SLIDE 5 - SQUID
+
+Recommended minimal set
+
+Label:
+Flux quantum
+
+Equation box input:
+\Phi_0 = \frac{h}{2e}
+
+Plain text version:
+Phi_0 = h / 2e
+
+
+Label:
+Critical current modulation
+
+Equation box input:
+I_{c,\mathrm{SQUID}}(\Phi)=2I_0\left|\cos\left(\pi\Phi/\Phi_0\right)\right|
+
+Plain text version:
+I_c,SQUID(Phi) = 2 I_0 | cos(pi Phi / Phi_0) |
+
+
+Optional third formula
+
+Label:
+Phase constraint
+
+Equation box input:
+\varphi_1-\varphi_2 = 2\pi\Phi/\Phi_0
+
+Plain text version:
+varphi_1 - varphi_2 = 2 pi Phi / Phi_0
+
+
+Short line under the figure
+
+small \Delta\Phi \rightarrow measurable \Delta V
+
+Plain text version:
+small Delta Phi -> measurable Delta V
+
+
+Best compact slide combination
+
+1. \Phi_0 = \frac{h}{2e}
+2. I_{c,\mathrm{SQUID}}(\Phi)=2I_0\left|\cos\left(\pi\Phi/\Phi_0\right)\right|
+3. small \Delta\Phi \rightarrow measurable \Delta V

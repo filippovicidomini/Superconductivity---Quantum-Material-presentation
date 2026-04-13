@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian,english]{babel}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xr-hyper}
+\usepackage{enumitem}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black
+}
+
+\definecolor{ink}{HTML}{1F2A44}
+\definecolor{accent}{HTML}{0F4C5C}
+\definecolor{soft}{HTML}{F4F1EA}
+\definecolor{line}{HTML}{D8D0C2}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist[itemize]{topsep=0.25em,itemsep=0.2em,leftmargin=1.5em}
+
+% Compile first the Beamer file in presentation-advanced/ppt so that the labels exist.
+\externaldocument{ppt/advanced_superconducting_devices_beamer}
+
+\newcommand{\slidebox}[1]{%
+  \fcolorbox{line}{soft}{%
+    \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{%
+      \textbf{Slide Beamer collegata:} \ref{#1}\hfill\texttt{#1}%
+    }%
+  }%
+}
+
+\newcommand{\studyslide}[5]{%
+  \section{#2}
+  \slidebox{#1}
+
+  {\color{accent}\textbf{Cosa resta in slide}}
+  \begin{itemize}
+    #3
+  \end{itemize}
+
+  {\color{accent}\textbf{Testo da studiare}}
+  #4
+
+  {\color{accent}\textbf{Transizione}}
+  #5
+
+  \newpage
+}
+
+\title{Advanced Superconducting Devices\\\large File di studio collegato alle slide Beamer}
+\author{Filippo Vicidomini}
+\date{April 2026}
+
+\begin{document}
+\selectlanguage{italian}
+\maketitle
+
+Questo file serve come testo da studiare, mentre il Beamer resta leggero: parole chiave, formule e immagini.
+
+Flusso consigliato:
+\begin{itemize}
+  \item aggiorna prima \texttt{ppt/advanced\_superconducting\_devices\_beamer.tex}
+  \item compila il Beamer
+  \item compila poi questo file, cosi i riferimenti alle slide si aggiornano
+\end{itemize}
+
+\tableofcontents
+\newpage
+
+\studyslide
+  {slide:title}
+  {Title}
+  {
+    \item titolo del tema
+    \item tre famiglie applicative
+    \item messaggio generale della presentazione
+  }
+  {Questa slide non deve spiegare ancora la fisica. Deve solo aprire il discorso con un contrasto chiaro: la superconduttivita sembra un tema da fisica di base, ma in realta porta a dispositivi concreti per trattamento delle acque, magnetoencefalografia e rivelazione di oggetti metallici nascosti. La frase da fissare e che una sola piattaforma fisica produce due famiglie di dispositivi molto diverse.}
+  {Dopo l'apertura, conviene dare subito una mappa logica del talk: prima la fisica minima, poi i dispositivi, infine le tre applicazioni.}
+
+\studyslide
+  {slide:guiding-idea}
+  {Guiding idea}
+  {
+    \item due vie: corrente elevata e sensing coerente
+    \item due famiglie: magneti superconduttivi e SQUID
+    \item un claim centrale
+  }
+  {Qui devi esplicitare l'architettura concettuale dell'intera presentazione. La superconduttivita diventa tecnologia in due modi: puo sostenere correnti molto grandi con perdite trascurabili, oppure puo trasformare piccole variazioni di flusso magnetico in segnali elettrici grazie alla coerenza di fase e all'effetto Josephson. Da qui nascono due rami: il ramo dei magneti per campi intensi e il ramo degli SQUID per la rivelazione ultra-sensibile.}
+  {La transizione naturale e: prima chiarisco cosa rende speciale uno stato superconduttivo, poi mostro come quella fisica si traduce in dispositivi.}
+
+\studyslide
+  {slide:superconductor-useful}
+  {What makes a superconductor technologically useful?}
+  {
+    \item $R=0$
+    \item Meissner effect
+    \item type-II vortices
+    \item mixed state
+  }
+  {Il punto chiave e che la superconduttivita non coincide semplicemente con resistenza nulla. La firma fisica vera e l'effetto Meissner, cioe l'espulsione del campo magnetico dal bulk sotto la temperatura critica. Questo mostra che siamo davanti a una fase termodinamica distinta. Nei materiali di tipo II il flusso entra sotto forma di vortici quantizzati tra $H_{c1}$ e $H_{c2}$, e proprio questo regime rende possibili molte applicazioni ad alto campo.}
+  {A questo punto puoi dire: oltre al trasporto senza dissipazione, c'e un secondo ingrediente decisivo, cioe la fase macroscopica dell'ordine superconduttivo.}
+
+\studyslide
+  {slide:josephson}
+  {Macroscopic phase and the Josephson effect}
+  {
+    \item order parameter
+    \item phase is observable
+    \item Josephson current
+    \item voltage drives phase
+  }
+  {Questa slide introduce il ponte tra teoria e dispositivo. La funzione d'onda macroscopica del condensato ha una fase fisicamente osservabile. Se due superconduttori sono debolmente accoppiati, una differenza di fase genera una supercorrente e una tensione applicata fa evolvere la fase nel tempo. Il messaggio da far passare e semplice: il flusso magnetico puo modificare la fase, e la fase puo essere letta elettricamente.}
+  {La frase di passaggio puo essere: se la fase e controllabile e osservabile, allora possiamo costruire un interferometro superconduttivo.}
+
+\studyslide
+  {slide:squid}
+  {SQUID: flux-to-voltage transducer}
+  {
+    \item loop + 2 JJ
+    \item flux sets interference
+    \item periodic transfer curve
+    \item $\Delta \Phi \rightarrow \Delta V$
+  }
+  {Lo SQUID e il dispositivo centrale del talk. Un piccolo cambiamento di flusso modifica la fase attorno al loop, questo cambia la corrente critica e infine l'elettronica di lettura lo trasforma in una tensione misurabile. Non serve entrare in tutti i dettagli circuitali: basta fissare l'idea che lo SQUID e un trasduttore da flusso magnetico a segnale elettrico.}
+  {Subito dopo conviene ribadire il meccanismo con una catena intuitiva molto breve.}
+
+\studyslide
+  {slide:phase-to-measurement}
+  {From phase to measurement (intuition)}
+  {
+    \item field $B$
+    \item flux $\Phi$
+    \item phase $\varphi$
+    \item supercurrent $I_s$
+    \item voltage $V$
+  }
+  {Questa e la slide piu didattica del blocco teorico. Non deve piu essere una lista di bullet, ma un diagramma causale orizzontale. Serve a rallentare per pochi secondi e fissare la catena: campo magnetico, flusso, fase, corrente, tensione. Se l'audience capisce questa sequenza, allora capisce perche un effetto quantistico puo diventare un sensore pratico.}
+  {La transizione qui e il bivio del talk: da una parte magneti superconduttivi per creare il campo, dall'altra SQUID per leggerlo con sensibilita estrema.}
+
+\studyslide
+  {slide:wastewater}
+  {Application 1: wastewater treatment by magnetic separation}
+  {
+    \item tag pollutants with magnetic seeds
+    \item HGMS matrix traps magnetic flocs
+    \item clean water exits, flocs stay
+    \item SC magnet provides large $B \nabla B$
+  }
+  {Il primo esempio serve a far capire che la superconduttivita non significa sempre sensore quantistico. In questo caso il componente superconduttivo e il magnete. Il processo HGMS va spiegato in tre passi. Prima si aggiungono semi magnetici che si legano agli inquinanti o formano flocculi magnetizzabili. Poi il refluo attraversa una matrice ferromagnetica posta dentro il campo di un magnete superconduttivo. Il campo magnetizza la matrice e genera gradienti locali molto intensi, quindi i flocculi magnetici vengono catturati mentre l'acqua chiarificata prosegue. Infine la frazione trattenuta puo essere rimossa nella fase di rigenerazione. Il punto fisico da sottolineare e che conta il prodotto tra campo e gradiente, cioe $B \nabla B$: la superconduttivita serve a rendere questo regime ad alto campo energeticamente realistico.}
+  {Per passare alla slide successiva puoi dire che, visto il processo, resta da chiarire perche convenga usare proprio un magnete superconduttivo.}
+
+\studyslide
+  {slide:wastewater-magnet}
+  {Why use a superconducting magnet here?}
+  {
+    \item resistive vs SC
+    \item stable high field
+    \item lower Joule losses
+    \item cryogenic constraint
+  }
+  {Qui il focus e ingegneristico. Un magnete resistivo puo generare campo intenso, ma il costo energetico del funzionamento continuo cresce rapidamente. Una bobina superconduttiva rende piu realistico lavorare ad alto campo con dissipazione molto ridotta nella bobina stessa. Il prezzo da pagare e la criogenia, quindi il vero trade-off non e solo fisico ma di integrazione d'impianto.}
+  {La transizione migliore e una contrapposizione netta: il primo caso usa la superconduttivita per produrre forza magnetica; il secondo la usera per rivelare campi estremamente deboli.}
+
+\studyslide
+  {slide:meg}
+  {Application 2: magnetoencephalography with SQUID arrays}
+  {
+    \item brain fields down to $10^{-15}$ T
+    \item whole-head SQUID arrays
+    \item epilepsy + mapping
+    \item sensitivity + ms resolution
+  }
+  {MEG e l'esempio clinico piu maturo del ramo sensing. I campi magnetici generati dall'attivita neuronale sono piccolissimi, quindi il punto non e generare campo ma leggere un segnale quasi impercettibile in modo non invasivo. Le matrici di SQUID, ospitate in un dewar criogenico, permettono questa misura con eccellente risoluzione temporale. Dal punto di vista applicativo, i riferimenti piu chiari sono la localizzazione pre-chirurgica dei foci epilettici e il functional mapping.}
+  {Dopo MEG puoi aprire il confronto con un ambiente meno controllato: cosa succede se vogliamo usare sensibilita estrema fuori dall'ospedale e fuori dal laboratorio?}
+
+\studyslide
+  {slide:buried-metal}
+  {Application 3: buried-metal and landmine detection}
+  {
+    \item excitation coil
+    \item weak secondary field
+    \item low-frequency sensitivity
+    \item noise + motion + cryogenics
+  }
+  {Qui la logica di misura e induttiva. Una bobina di eccitazione genera un campo variabile, il target metallico produce correnti parassite e quindi un campo secondario debole. Lo SQUID e interessante perche mantiene grande sensibilita alle basse frequenze, che possono essere utili per profondita e selettivita. A differenza di MEG, pero, l'ambiente e rumoroso e mobile, quindi la sensibilita da sola non basta: contano anche schermatura, robustezza e strategia di scansione.}
+  {La chiusura naturale e mettere le tre applicazioni una accanto all'altra e confrontare la grandezza fisica che ognuna cerca di ottimizzare.}
+
+\studyslide
+  {slide:comparison}
+  {One physics, three engineering targets}
+  {
+    \item wastewater: high field / gradient
+    \item MEG: fT biomagnetism
+    \item buried metal: weak LF signal
+  }
+  {Questa slide serve a impedire che il talk sembri una lista di casi separati. La fisica di base e comune, ma cambia l'obiettivo ingegneristico. Nel trattamento delle acque vuoi forza magnetica e gradiente elevato. In MEG vuoi sensibilita estrema. Nel buried-metal detection vuoi soprattutto buona risposta a campi secondari deboli in bassa frequenza e in un ambiente meno controllato.}
+  {A questo punto conviene aggiungere realismo: i dispositivi superconduttivi sono potenti, ma hanno vincoli pratici condivisi.}
+
+\studyslide
+  {slide:limits}
+  {Limits and outlook}
+  {
+    \item cryogenics
+    \item shielding and noise
+    \item system complexity
+    \item better HTS and electronics
+  }
+  {Questa slide bilancia il discorso. Serve a mostrare che non stai vendendo una tecnologia ideale, ma che conosci i limiti reali: infrastruttura criogenica, controllo del rumore, complessita del sistema e costi di esercizio. L'outlook deve quindi essere molto concreto: materiali HTS migliori, criorefrigerazione piu semplice, elettronica a basso rumore e piattaforme piu compatte.}
+  {La chiusura puo essere molto breve: dopo aver visto limiti e prospettive, torno al messaggio unificante della presentazione.}
+
+\studyslide
+  {slide:conclusion}
+  {Conclusion}
+  {
+    \item create field
+    \item read field
+    \item same physics, three applications
+  }
+  {La conclusione deve essere corta e memorabile. La frase migliore e che la superconduttivita diventa una piattaforma tecnologica per due motivi complementari: puo creare campi magnetici in modo efficiente oppure puo leggere campi magnetici con sensibilita quantistica. Le tre applicazioni non sono esempi scollegati, ma tre esiti della stessa fisica adattata a obiettivi ingegneristici diversi.}
+  {Fine del talk. Se vuoi, da qui si puo aprire la discussione con una domanda finale sul futuro dei dispositivi HTS o sulla semplificazione della criogenia.}
+
+\studyslide
+  {slide:references}
+  {References}
+  {
+    \item course lectures
+    \item wastewater papers
+    \item MEG guideline paper
+    \item buried-metal SQUID paper
+  }
+  {Questa slide non va letta. Serve solo come chiusura formale e come supporto se qualcuno ti chiede da dove arrivano i numeri o gli esempi applicativi.}
+  {Nessuna transizione: qui la presentazione e chiusa.}
+
+\end{document}

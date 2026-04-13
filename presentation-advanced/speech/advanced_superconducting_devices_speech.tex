@@ -1,0 +1,321 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!black,
+  urlcolor=blue!50!black,
+  citecolor=blue!50!black
+}
+
+\definecolor{ink}{HTML}{1F2A44}
+\definecolor{accent}{HTML}{0F4C5C}
+\definecolor{soft}{HTML}{F4F1EA}
+\definecolor{line}{HTML}{D8D0C2}
+
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{topsep=0.25em,itemsep=0.2em,leftmargin=1.4em}
+\setlist[enumerate]{topsep=0.25em,itemsep=0.2em,leftmargin=1.6em}
+
+\newcommand{\speech}[1]{%
+  \vspace{0.35em}
+  {\color{accent}\textbf{Suggested speech.}}\\
+  \fcolorbox{line}{soft}{\parbox{0.965\linewidth}{\itshape #1}}
+}
+
+\newcommand{\slideplan}[1]{%
+  {\color{accent}\textbf{Slide plan.}} #1
+}
+
+\newcommand{\visual}[1]{%
+  {\color{accent}\textbf{Visual.}} #1
+}
+
+\newcommand{\technical}[1]{%
+  {\color{accent}\textbf{Advanced note.}} #1
+}
+
+\newcommand{\transition}[1]{%
+  {\color{accent}\textbf{Transition.}} #1
+}
+
+\newcommand{\timing}[1]{%
+  {\color{accent}\textbf{Timing.}} #1
+}
+
+\newcommand{\keypoint}[1]{%
+  {\color{accent}\textbf{Core point.}} #1
+}
+
+\newcommand{\theory}[1]{%
+  {\color{accent}\textbf{Theory to explain.}} #1
+}
+
+\title{Quantum Superconducting Devices\\\large Advanced Speaking Script and Slide Guide}
+\author{Superconductivity and Quantum Materials}
+\date{April 2026}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Introductory premise}
+
+This file is meant to help you build the PowerPoint (PPT) manually in a clean and systematic way. The central idea of the talk is only one:
+
+\begin{quote}
+The same superconducting physics leads to two different device families: high-field superconducting magnets and superconducting quantum interference device (SQUID) sensors.
+\end{quote}
+
+The whole presentation should follow directly from that claim:
+\begin{enumerate}
+  \item open with a strong contrast between apparently abstract physics and real applications
+  \item explain only the minimum theory needed later
+  \item show how that theory produces two technological branches
+  \item close with three applications that look different but are unified by the same physics
+\end{enumerate}
+
+\keypoint{Wastewater treatment belongs to the superconducting-magnet branch. Magnetoencephalography (MEG) and buried-metal detection belong to the SQUID branch.}
+
+\slideplan{General rule for every slide: use little text, one dominant message, and one visual that can be understood in about five seconds. If a slide turns into a page of notes, it is too dense for an effective PPT.}
+
+\visual{For a hand-built PPT, it is best to use mostly clean schematics and only a small number of well-chosen real images: theory = redrawn diagrams; applications = one physical sketch plus a real photo only when it adds credibility.}
+
+\speech{When people hear about superconductivity, they often think of something elegant but remote from practical life. My goal today is to show the opposite. The same physics can help clean wastewater, measure brain activity, and detect buried metallic objects. The main idea of the talk is simple: superconductivity becomes useful in two complementary ways. First, it supports very large currents with very low dissipation, which makes strong-field magnets practical. Second, phase coherence and the Josephson effect allow tiny magnetic-flux changes to be converted into measurable electrical signals. Once those two routes are clear, the applications stop looking disconnected.}
+
+\section{Slide 1: Title + scope}
+
+\keypoint{Open with the contrast: superconductivity looks like fundamental physics, but it leads to very concrete technologies.}
+
+\theory{No real theory is needed here. You only need to set the right mental frame: one physical platform, two device families, and three very different applications.}
+
+\slideplan{Use a broader and more accurate cover than the current SQUID-only wording. The cleanest option is title ``Superconducting Devices'' with subtitle ``From Magnetic Separation to SQUID Sensing''. Keep the slide visually minimal and let the subtitle define the scope.}
+
+\visual{Since the title slide is already very stripped down, keep that choice. A dark background with the title centered is enough. If you add any visual element, it should be extremely light: one thin line, one small geometric accent, or one very subtle device motif. Do not overload the cover with multiple images.}
+
+\speech{This talk is not only about one sensor or one laboratory effect. It is about superconductivity as a device platform. The same underlying physics can be engineered in two very different ways: either to generate strong magnetic action or to detect extremely weak magnetic signals. That is why the title should stay broad. From that point of view, wastewater treatment, magnetoencephalography, and buried-metal detection become three coherent examples rather than three disconnected case studies.}
+
+\transition{Move immediately from the opening promise to the logical map of the talk: one physics, two device families.}
+
+\section{Slide 2: Introduction to Superconductivity}
+
+\keypoint{This slide should act as the conceptual map of the whole presentation, not as a full theory slide yet.}
+
+\theory{The conceptual split is the same as before: high current with negligible losses leads to superconducting magnets, while phase coherence plus the Josephson effect leads to superconducting quantum interference device (SQUID) sensing. The important point here is not detail, but structure. The audience should immediately understand that the same superconducting physics produces two device families and therefore different engineering targets.}
+
+\slideplan{The slide should match the version you are now using: title ``Introduction to Superconductivity'', left-side bullets ``One physics'', ``Two device families'', ``Different engineering targets'', and on the right the flowchart from superconductivity to the high-field route and the sensing route. If you edit the bullet text in the PPT, use ``Two device families'' rather than ``Two device family''.}
+
+\visual{The current layout works well: text on the left, flowchart on the right. The flowchart should remain the dominant visual element, because it already shows the full logical architecture of the talk in one glance.}
+
+\speech{This slide gives the conceptual map of the whole talk. The main point is that I am not discussing separate technologies that happen to use superconductors. I am starting from one physical platform and then following two different device routes. The first route is the high-field route: superconductivity supports large currents with very low dissipation, so it becomes useful for strong magnetic action. The second route is the sensing route: phase coherence and the Josephson effect allow extremely small magnetic signals to be read out with superconducting quantum interference devices, or SQUIDs. From there, the applications naturally separate according to their engineering target. Wastewater treatment belongs to the high-field branch, while magnetoencephalography and buried-metal detection belong to the sensing branch.}
+
+\transition{After this map, you can say that only a few theoretical ingredients are needed to understand why these two branches exist at all.}
+
+\section{Slide 3: What is a superconductor?}
+
+\keypoint{Keep this slide foundational: a superconductor is not just a low-resistance material, but a distinct physical state with zero resistance and magnetic-field expulsion.}
+
+\theory{For this slide, three ideas are enough. First: below the critical temperature $T_c$, the direct-current resistance drops to zero. Second: a superconductor also expels magnetic field from the bulk through the Meissner effect. Third: in type-II superconductors, magnetic flux can later re-enter in the form of vortices, which is why many practical superconductors can still work at high field. If you want one equation, use only the London equation $\nabla^2 \mathbf{B}=\mathbf{B}/\lambda_L^2$, but the slide can work even without equations.}
+
+\slideplan{Use the title ``What is a superconductor?'' On the left, keep only 3 short bullets, for example: ``Zero electrical resistance'', ``Meissner effect'', ``Type-II vortices at high field''. On the right, use one clear sketch. If you want the cleanest version, do not put equations on the slide.}
+
+\visual{The best image is a simple ``above $T_c$ / below $T_c$'' Meissner sketch showing magnetic-field lines crossing a normal state and being expelled in the superconducting state. If you want one extra detail, add a very small inset for type-II vortices, but keep the Meissner image dominant. Do not use a crowded textbook figure.}
+
+\speech{Before discussing devices, I need a very basic definition. A superconductor is a material that, below a critical temperature, shows zero electrical resistance. But that is not the whole story. The defining physical signature is the Meissner effect, meaning that magnetic field is expelled from the material. So superconductivity is not simply very good conductivity; it is a distinct phase of matter. In many practical type-II superconductors, magnetic flux can later enter in the form of quantized vortices, which is why superconductivity can still remain useful in high-field applications.}
+
+\transition{At this point, shift the focus from magnetic response to the macroscopic phase of the condensate.}
+
+\section{Slide 4: Macroscopic phase and Josephson effect}
+
+\keypoint{Here you introduce the idea that the condensate phase is observable and can control a current.}
+
+\theory{The macroscopic wavefunction of the condensate is written as $\psi(\mathbf{r}) = |\psi(\mathbf{r})| e^{i\theta(\mathbf{r})}$. The important new quantity is the phase $\theta$. If two superconductors are separated by a thin insulating barrier, their wavefunctions overlap weakly and Cooper pairs can tunnel across the barrier. That is the Josephson effect, and the supercurrent depends on the phase difference: $I_s = I_c \sin \varphi$. If a voltage is applied, the phase difference evolves in time according to $d\varphi/dt = 2eV/\hbar$. The core message is that phase is not only a mathematical label: it becomes an observable electrical variable.}
+
+\slideplan{The current slide title should match the PPT: ``Macroscopic phase and Josephson effect''. The slide structure works well: on the left, the formulas card with the order parameter, Josephson current, and voltage-phase relation; on the right, the Josephson-junction images that show the insulating barrier and the tunneling picture. Do not add more text. The slide is already dense enough, and your voice should do the real explanatory work.}
+
+\visual{The visual logic is now good: the left side tells the audience what to read, and the right side tells them what the junction physically looks like. When presenting, point first to the wavefunction, then to the barrier, then to the idea of Cooper-pair tunneling. That sequence matches the order of the equations.}
+
+\speech{Up to this point, I have described a superconductor mainly through zero resistance and magnetic response. But there is another essential ingredient: the condensate is described by a macroscopic wavefunction, and that means it has a phase. That phase is not just a formal detail. If two superconductors are separated by a very thin insulating barrier, their wavefunctions overlap weakly, and Cooper pairs can tunnel across the barrier. This is the Josephson effect. The first important relation is that the supercurrent depends on the phase difference between the two sides, so phase can directly control current. The second important relation is that, if I apply a voltage, the phase difference evolves in time. So the logic runs in both directions: phase affects current, and voltage affects phase. That is why this slide matters. It shows the moment when a collective quantum phase stops being only an abstract concept and becomes a usable device variable. This is the real bridge from superconducting physics to superconducting electronics.}
+
+\transition{The natural transition is: if magnetic flux can modify the phase, then I can build a superconducting interferometer.}
+
+\section{Slide 5: SQUID}
+
+\keypoint{This is the first complete sensing device in the talk: magnetic flux becomes an electrical readout.}
+
+\theory{A superconducting quantum interference device (SQUID) combines Josephson junctions with a closed superconducting loop. In a direct-current SQUID (DC-SQUID), two Josephson junctions share the same loop, and the phase differences across the junctions are constrained by flux quantization. Because of that constraint, the total critical current is periodic in the applied magnetic flux. In practice, the device is biased so that a tiny flux variation produces a measurable voltage variation. The one idea the audience must retain is simple: flux changes interference, and interference changes the output.}
+
+\slideplan{Use the exact title now present in the PPT: ``Superconducting Quantum Interference Device (SQUID)''. Keep the slide extremely visual. Use a large superconducting loop with two Josephson junctions, an applied-flux arrow, and a small transfer curve showing the periodic voltage response. If you want a text block, keep only 2--3 short lines: ``superconducting loop + two junctions'', ``magnetic flux changes phase interference'', ``small $\Delta \Phi$ becomes measurable $\Delta V$''.}
+
+\visual{Point first to the loop, then to the two junctions, then to the transfer curve. A clean schematic is much better than a laboratory photograph. If the curve is present, highlight only the local slope where the SQUID operates as a sensitive sensor.}
+
+\speech{The Josephson effect becomes especially powerful when I close the circuit into a loop. A superconducting quantum interference device, or SQUID, is essentially a superconducting loop with Josephson junctions. In the direct-current SQUID, magnetic flux threading the loop changes the allowed phase configuration, so the two junctions interfere with each other. That interference modulates the electrical response of the device. In practical terms, a very small change in magnetic flux becomes a measurable change in voltage. This is why the SQUID is such an important sensor: it converts an extremely weak magnetic signal into an electrical signal that I can amplify and record.}
+
+\transition{The next step is to make explicit the whole conversion chain: what starts as a magnetic field is finally read out as voltage.}
+
+\section{Slide 6: From Phase to Measurement}
+
+\keypoint{The measured voltage is the end of a transduction chain, not the starting physical quantity.}
+
+\theory{In a SQUID, an external magnetic field couples to the superconducting loop as magnetic flux. Flux quantization constrains the phase winding around the loop, so flux changes the interference condition of the junctions. That interference modulates the Josephson current, and the biased readout electronics convert the current modulation into a voltage modulation. The compact chain to remember is $B \rightarrow \Phi \rightarrow \varphi \rightarrow I_s \rightarrow V$.}
+
+\slideplan{Let the transduction-chain diagram dominate the slide. Keep the title exactly as in the PPT: ``From Phase to Measurement''. Add no more than one short sentence below it, for example: ``The measured voltage is the end of a chain that starts with magnetic field.''}
+
+\visual{Use the large left-to-right chain diagram as the main object on the slide. The audience should be able to decode the logic in one glance: field, flux, phase, current, voltage.}
+
+\speech{This slide clarifies what the device is actually doing. A SQUID does not directly display phase on a screen. The physical signal starts as a magnetic field. That field couples into the loop as magnetic flux. The flux changes the phase condition around the loop, the phase condition changes the Josephson current, and the electronics finally turn that change into a voltage that I can measure. So the output quantity is voltage, but the original physical quantity is magnetic field.}
+
+\transition{Once this chain is clear, the only remaining question is why such a complex device is worth using at all.}
+
+\section{Slide 7: Why SQUIDs matter}
+
+\keypoint{The whole point of the SQUID is extreme sensitivity to weak magnetic fields.}
+
+\theory{SQUIDs are among the most sensitive magnetometers ever developed, with sensitivities that can reach the femtotesla scale in appropriate conditions. They are especially valuable when the signal is weak, passive, low-frequency, or non-invasive readout is required. That is why they appear in biomagnetism and in other cases where conventional sensors struggle. The practical message is simple: the sensitivity gain can justify the cryogenic complexity.}
+
+\slideplan{Keep the current bullet-slide logic, but correct the title spelling to ``Why SQUIDs matter'' and keep ``SQUIDs'' fully capitalized. The bullets can remain close to the current version: ultra-high magnetic sensitivity, down to $10^{-15}$ T, non-invasive and passive sensing, useful where other sensors fail, and direct relevance to magnetoencephalography (MEG).}
+
+\visual{This slide can remain text-led because the previous slide already carried the main diagram. If you add any image, make it very small and contextual, not a competing visual.}
+
+\speech{At this point, the only question that matters is why we accept all this device complexity. The answer is sensitivity. SQUIDs can detect extraordinarily weak magnetic fields, down to the femtotesla scale in the right conditions. They are also passive sensors, which is important whenever the field should be measured without strongly perturbing the system. So the value of the SQUID is not just that it is elegant physics. Its value is that it can operate where conventional magnetometers are simply not sensitive enough. That is exactly why it becomes useful in applications such as magnetoencephalography.}
+
+\transition{The most natural first example is biomagnetic sensing, because it immediately shows why femtotesla sensitivity matters.}
+
+\section{Slide 8: Magnetoencephalography (MEG)}
+
+\keypoint{MEG is the clearest mature example of the sensing branch: tiny fields, non-invasive readout, real clinical use.}
+
+\theory{Magnetoencephalography measures the magnetic fields produced by neuronal currents outside the head. The signals are extremely weak, typically between about $10^{-15}$ and $10^{-11}$ T. That is why SQUID arrays are needed. Whole-head systems typically use about 300 sensors in a cryogenic dewar. The most cited clinical uses are localization of epileptic foci and pre-operative functional mapping. If you want one more advanced remark, you can add that MEG combines high temporal resolution with a non-trivial inverse problem.}
+
+\slideplan{Let a real photo of a whole-head MEG system dominate the slide. Next to it, include 3--4 quick facts: field scale, non-invasive measurement, about 300 sensors, epilepsy / functional mapping.}
+
+\visual{The best figure is a real photo of an MEG system. If you want to add a head-plus-sensor schematic, keep it small and secondary. Avoid making the slide look like a page of neuroanatomy.}
+
+\speech{MEG is one of the strongest real examples of SQUID technology already embedded in clinical workflows. The reason for using SQUIDs is simple: the brain produces extremely small magnetic fields, and conventional sensors are not sensitive enough to read them reliably. SQUID arrays make that readout possible while preserving millisecond temporal resolution. So here the key quantity is not magnetic force, but extreme sensitivity to a very weak field.}
+
+\transition{MEG shows the sensing branch in a highly controlled biomedical environment; the next question is whether similar sensitivity is useful in a much harsher outdoor setting.}
+
+\section{Slide 9: Buried-metal and landmine detection}
+
+\keypoint{The sensing logic is the same, but now the environment is much noisier and more operationally constrained.}
+
+\theory{The principle is inductive metal detection. An excitation coil generates a time-varying field; the buried metallic target develops induced currents; those currents generate a weak secondary field that the sensor must detect. SQUIDs are attractive here because of their low-frequency sensitivity, which can improve both investigation depth and selectivity. For field applications, high-critical-temperature superconducting devices (high-$T_c$ devices) are attractive because they operate around 77 K with liquid nitrogen: more noise than low-critical-temperature superconducting devices (low-$T_c$ devices), but much simpler logistics. A useful number to remember is the detection of a 10 mg aluminum particle reported by Guo and co-workers.}
+
+\slideplan{This slide should be a measurement chain: excitation coil, buried target, eddy currents, weak secondary field, SQUID readout. If there is space, add a small box with ``high-$T_c$ operation at 77 K'' and a numeric box with ``10 mg aluminum particle detected''.}
+
+\visual{Use a technical coil-target-sensor schematic. Avoid emotional or dramatic imagery of landmines. The focus must remain on the physical measurement principle.}
+
+\speech{The next application changes the environment completely. Now the problem is not in a hospital, but in a field-detection scenario where sensitivity and operational practicality both matter. I excite the buried metallic target, the target generates a weak secondary field, and the sensor has to read that response. The value of the SQUID appears especially at low frequency, where deeper and more selective interrogation becomes possible. So the challenge here is sensitivity in a noisy real environment.}
+
+\transition{So far I have followed the sensing branch. The roadmap of the talk had a second route as well: superconductivity can also be used to create strong magnetic action.}
+
+\section{Slide 10: Wastewater treatment by magnetic separation}
+
+\keypoint{Here the superconducting component is the magnet, not the sensor.}
+
+\theory{The process is high-gradient magnetic separation (HGMS). Many pollutants are not strongly magnetic by themselves, so they are first made magnetically addressable using magnetic seeds or magnetic flocculants. Then the wastewater passes through a ferromagnetic matrix, for example steel wool or wire mesh, placed inside the field of a superconducting magnet. The field magnetizes the matrix and creates very large local gradients; the magnetic flocs are retained while clarified water continues downstream. The physical quantity to emphasize is magnetic force, and therefore the regime of large $B \nabla B$.}
+
+\slideplan{Build the slide as a three-step process: ``tag pollutants'', ``HGMS separator'', ``clean water out / captured flocs''. At the side, include only one guiding sentence: ``need: large $B \nabla B$''. If you want one memorable number, add a badge such as ``up to 76\% chemical oxygen demand (COD) removal''.}
+
+\visual{The right choice is an HGMS process sketch. Do not use a generic photo of water or an industrial plant. The figure must actually show the magnetic-capture mechanism.}
+
+\speech{The water-treatment example shows the other major technological route. Here the superconducting element is not a sensor, but the magnet itself. The workflow is simple: pollutants are first attached to magnetic particles, then the wastewater passes through a high-gradient magnetic separator, and the tagged fraction is retained while clarified water continues through the system. So the key resource here is not sensitivity, but magnetic force, and more specifically the combination of high field and high gradient.}
+
+\transition{After showing the process, the natural engineering question is why this separator benefits from a superconducting magnet rather than a resistive one.}
+
+\section{Slide 11: Why use a superconducting magnet here?}
+
+\keypoint{The advantage is not in the chemistry of the process, but in making continuous strong-field operation energetically realistic.}
+
+\theory{A resistive magnet can produce a high field, but at the cost of large Joule losses and therefore a heavy power budget, especially in continuous operation. A superconducting coil can maintain high fields more efficiently and more stably. The trade-off does not disappear: resistive losses are replaced by cryogenic complexity. So the real engineering reading is ``less Joule loss, more cryogenic integration''.}
+
+\slideplan{Make this a simple comparison slide: resistive magnet vs superconducting magnet. Use a few compact lines: high field possible, power cost, continuous operation, cryogenic constraint. If you prefer, use four very compact bullets plus a small callout such as ``better for continuous high-field HGMS''.}
+
+\visual{A conceptual comparison works better than a photo here. If you want one real image, use a small inset of an industrial magnet or cryostat, but the core of the slide should remain the conceptual comparison.}
+
+\speech{The point of this slide is engineering rather than chemistry. A resistive magnet can in principle generate a strong field, but continuous operation becomes energetically expensive. A superconducting coil makes high-field operation more realistic because the coil losses are drastically reduced. The price is cryogenics, so the true trade-off is not physics versus no physics, but resistive power cost versus cryogenic system integration.}
+
+\transition{At this point both branches of the talk are complete, so the next step is to compare them directly.}
+
+\section{Slide 12: Comparing the three applications}
+
+\keypoint{This slide must give the talk intellectual unity.}
+
+\theory{The correct comparison is not by industrial sector, but by optimized quantity. Wastewater treatment: high field and high gradient. MEG: extreme biomagnetic sensitivity. Buried-metal detection: low-frequency sensitivity in a non-ideal environment. In all three cases the basic physics is the same, but the engineering target changes.}
+
+\slideplan{Build a very clean table with three rows and 3--4 columns. An effective structure is: application, useful quantity, role of superconductivity, main constraint. Do not put images here.}
+
+\visual{The best solution is a table or three aligned columns with small icons. The important point is that the comparison can be read immediately.}
+
+\speech{If I compare the three cases directly, the common structure becomes obvious. In water treatment I want strong field and strong gradient. In MEG I want extreme sensitivity to tiny magnetic signals. In buried-metal detection I want good low-frequency sensitivity in a less controlled environment. The underlying superconducting physics does not change, but the engineering target does.}
+
+\transition{After the comparison, it is useful to add realism: these devices are powerful, but not effortless to implement.}
+
+\section{Slide 13: Limits and outlook}
+
+\keypoint{This slide prevents the talk from sounding promotional and shows engineering maturity.}
+
+\theory{There are three shared limitations. First: cryogenics, which remains a system cost and complexity. Second: shielding and noise control, especially crucial for the sensing branch. Third: mechanical and electronic integration, because a good superconducting element alone is not enough. The most credible development directions are better high-$T_c$ devices, simpler cryogenic platforms, more integrated low-noise electronics, and more compact systems placed closer to the experimental problem.}
+
+\slideplan{Split the slide into two halves: ``limits'' and ``outlook''. At the bottom, put one large concluding sentence such as ``the challenge is now system engineering as much as superconducting physics''.}
+
+\visual{A split layout with small icons or colored blocks works best. Avoid collages or too many unrelated technical figures.}
+
+\speech{To avoid ending on an overly idealized note, it is worth stating the common bottlenecks. Cryogenics remains a real constraint. Extreme sensitivity only helps if environmental noise is controlled. And in deployed systems, mechanical and electronic robustness matter as much as the sensing element itself. That is why the most promising directions are not only about better materials, but also about simpler cryogenics, improved readout, and more compact device integration.}
+
+\transition{The last slide should add nothing new; it should simply close the circle.}
+
+\section{Slide 14: Conclusion}
+
+\keypoint{The closing should bring everything back to the initial thesis: superconductivity can create the field or read the field.}
+
+\theory{Summarize everything in one chain: Meissner screening, macroscopic phase coherence, the Josephson effect, and flux quantization lead to two device families. One uses superconductivity to create magnetic field. The other uses superconductivity to detect magnetic field with extreme sensitivity. From these two routes, the three applications naturally follow.}
+
+\slideplan{Make this slide very simple: two central branches, ``create field'' and ``read field'', and below them three icons or three application keywords. Alternatively, use one large final sentence and one row of three applications.}
+
+\visual{Use a very clean recap graphic. No new photos, no new numbers, and no crowded table.}
+
+\speech{To conclude, superconducting devices sit at the boundary between condensed-matter physics and real technology. From the theory side, we take Meissner screening, phase coherence, the Josephson effect, and flux quantization. From the application side, we obtain two technological routes: superconducting magnets for strong-field tasks and SQUIDs for ultra-sensitive magnetic readout. Water treatment, MEG, and buried-metal detection are therefore not isolated case studies. They are three different ways of turning the same superconducting physics into technology.}
+
+\section{Quick checklist before building the PPT}
+
+\begin{itemize}
+  \item every slide should answer one question only
+  \item theory slides should use diagrams, not note screenshots
+  \item application slides should privilege process or measurement schematics
+  \item remember the three anchor numbers: 76\%, about 300 sensors, 10 mg
+  \item if a visual takes more than five seconds to decode, simplify it
+\end{itemize}
+
+\section{Essential sources}
+
+\subsection{Course material}
+\begin{itemize}
+  \item R. Arpaia, \textit{Lecture 4 - Superconductivity. Key Phenomena and Concepts}.
+  \item R. Arpaia, \textit{Lecture 7 - Superconductivity. London Equations (I)}.
+  \item R. Arpaia, \textit{Lecture 15 - The Josephson Effect. Gateway to Superconducting Device Physics (II)}.
+  \item R. Arpaia, \textit{Lecture 18 - Josephson Junction Devices. From Quantum Qubits to SQUIDs in Neuroscience}.
+\end{itemize}
+
+\subsection{Applications}
+\begin{itemize}
+  \item Y. Zhang et al., \textit{Study on industrial wastewater treatment using superconducting magnetic separation}, Cryogenics 51 (2011) 225--228. DOI: \href{https://doi.org/10.1016/j.cryogenics.2010.07.002}{10.1016/j.cryogenics.2010.07.002}.
+  \item J. Li et al., \textit{FeOOH and nZVI combined with superconducting high gradient magnetic separation for the remediation of high-arsenic metallurgical wastewater}, Separation and Purification Technology 285 (2022) 120372. DOI: \href{https://doi.org/10.1016/j.seppur.2021.120372}{10.1016/j.seppur.2021.120372}.
+  \item R. Hari et al., \textit{IFCN-endorsed practical guidelines for clinical magnetoencephalography (MEG)}, Clinical Neurophysiology 129 (2018) 1720--1747. DOI: \href{https://doi.org/10.1016/j.clinph.2018.03.042}{10.1016/j.clinph.2018.03.042}.
+  \item X. Guo et al., \textit{Metal detector based on high-$T_c$ RF SQUID}, Physica C 378--381 (2002) 1404--1407. DOI: \href{https://doi.org/10.1016/S0921-4534(02)01732-X}{10.1016/S0921-4534(02)01732-X}.
+\end{itemize}
+
+\end{document}

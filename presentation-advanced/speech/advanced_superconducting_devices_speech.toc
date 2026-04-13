@@ -1,0 +1,20 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introductory premise}{3}{section.1}%
+\contentsline {section}{\numberline {2}Slide 1: Title + scope}{3}{section.2}%
+\contentsline {section}{\numberline {3}Slide 2: Introduction to Superconductivity}{4}{section.3}%
+\contentsline {section}{\numberline {4}Slide 3: What is a superconductor?}{4}{section.4}%
+\contentsline {section}{\numberline {5}Slide 4: Macroscopic phase and Josephson effect}{5}{section.5}%
+\contentsline {section}{\numberline {6}Slide 5: SQUID}{6}{section.6}%
+\contentsline {section}{\numberline {7}Slide 6: From Phase to Measurement}{6}{section.7}%
+\contentsline {section}{\numberline {8}Slide 7: Why SQUIDs matter}{7}{section.8}%
+\contentsline {section}{\numberline {9}Slide 8: Magnetoencephalography (MEG)}{8}{section.9}%
+\contentsline {section}{\numberline {10}Slide 9: Buried-metal and landmine detection}{8}{section.10}%
+\contentsline {section}{\numberline {11}Slide 10: Wastewater treatment by magnetic separation}{9}{section.11}%
+\contentsline {section}{\numberline {12}Slide 11: Why use a superconducting magnet here?}{9}{section.12}%
+\contentsline {section}{\numberline {13}Slide 12: Comparing the three applications}{10}{section.13}%
+\contentsline {section}{\numberline {14}Slide 13: Limits and outlook}{10}{section.14}%
+\contentsline {section}{\numberline {15}Slide 14: Conclusion}{11}{section.15}%
+\contentsline {section}{\numberline {16}Quick checklist before building the PPT}{11}{section.16}%
+\contentsline {section}{\numberline {17}Essential sources}{12}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Course material}{12}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Applications}{12}{subsection.17.2}%
