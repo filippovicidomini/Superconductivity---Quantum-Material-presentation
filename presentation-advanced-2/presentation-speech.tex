@@ -86,7 +86,15 @@ The structure of this talk is intentionally simple. I will start from the basic 
 }
 
 \speech{
-A superconductor is not just a material with very low resistance. Below a critical temperature, the electrical resistance drops exactly to zero, which means that currents can persist without dissipation. At the same time, superconductors expel magnetic fields from their interior through the Meissner effect. This shows that superconductivity is a distinct thermodynamic phase. In type-II superconductors, magnetic flux can re-enter the material in the form of quantized vortices, which is crucial for many practical high-field applications.
+A superconductor is not simply a material with very low resistance, but a distinct quantum state of matter that appears below a critical temperature. When the system enters this state, the electrical resistance drops exactly to zero, which means that currents can flow without any energy dissipation. This is already a remarkable property, but it is not the most fundamental one.
+
+The defining feature of superconductivity is the Meissner effect: magnetic fields are expelled from the interior of the material. This shows that superconductivity is not just perfect conductivity, but a new thermodynamic phase with its own electromagnetic properties.
+
+From a microscopic point of view, superconductivity arises from the formation of Cooper pairs, which are bound states of electrons that behave collectively. These pairs condense into a macroscopic quantum state described by a single wavefunction.
+
+In many practical materials, known as type-II superconductors, magnetic flux can partially penetrate the material in the form of quantized vortices when the field exceeds a certain threshold. This allows superconductivity to survive even in relatively strong magnetic fields, which is essential for technological applications such as superconducting magnets.
+
+So the key idea to remember is that superconductivity combines zero resistance, magnetic field expulsion, and macroscopic quantum coherence into a single physical framework.
 }
 
 %------------------------------------------------
@@ -109,7 +117,17 @@ I_s = I_c \sin \varphi
 }
 
 \speech{
-The superconducting state can be described by a macroscopic wavefunction, characterized by both an amplitude and a phase. The important new concept here is the phase, which becomes a physically meaningful quantity. When two superconductors are separated by a thin insulating barrier, Cooper pairs can tunnel across it. This is the Josephson effect. The key point is that the supercurrent depends directly on the phase difference between the two superconductors, meaning that phase differences can be converted into measurable electrical quantities.
+The superconducting state can be described by a macroscopic wavefunction, written as $\psi = |\psi| e^{i\theta}$, where the key new quantity is the phase $\theta$. Unlike in normal conductors, this phase is coherent over macroscopic distances and becomes a physically observable variable.
+
+This has a profound consequence: if two superconductors are separated by a very thin insulating barrier, their wavefunctions can overlap, and Cooper pairs can tunnel across the barrier. This phenomenon is known as the Josephson effect.
+
+The first Josephson relation tells us that the supercurrent depends on the phase difference between the two superconductors, $I_s = I_c \sin \varphi$. This means that a purely quantum quantity, the phase, directly controls a measurable current.
+
+The second Josephson relation shows that if a voltage is applied across the junction, the phase difference evolves in time, $\frac{d\varphi}{dt} = \frac{2eV}{\hbar}$. So the relation works in both directions: phase controls current, and voltage controls phase.
+
+This is the key conceptual step: superconductivity is not only about zero resistance, but about macroscopic quantum coherence. The Josephson junction allows us to access and manipulate this phase, turning it into a usable electrical variable.
+
+This is exactly what makes devices like SQUIDs possible, because it provides the link between magnetic flux, phase interference, and measurable electrical signals.
 }
 
 %------------------------------------------------
@@ -129,7 +147,17 @@ The superconducting state can be described by a macroscopic wavefunction, charac
 }
 
 \speech{
-If we now take two Josephson junctions and place them in a superconducting loop, we obtain a SQUID. In this configuration, the magnetic flux threading the loop constrains the total phase change around the loop. This leads to an interference effect between the two junctions. As a result, even a very small variation in magnetic flux modifies the electrical response of the device. In practice, this allows us to convert tiny changes in magnetic flux into measurable voltage signals.
+If we now take two Josephson junctions and place them in a superconducting loop, we obtain a SQUID, which stands for Superconducting Quantum Interference Device. The key idea is that the superconducting phase around the loop cannot vary arbitrarily, but is constrained by flux quantization.
+
+In particular, the total phase change around the loop must be related to the magnetic flux threading the loop. This means that when an external magnetic flux is applied, it directly affects the phase differences across the two Josephson junctions.
+
+As a result, the two junctions do not act independently, but interfere with each other. This interference modifies the total supercurrent flowing through the device, leading to a periodic dependence of the critical current on the applied magnetic flux.
+
+In practice, the SQUID is biased so that it operates in a region where this dependence is very sensitive. Under these conditions, even a very small change in magnetic flux produces a measurable change in the electrical output, typically a voltage.
+
+So the essential mechanism is a chain of transformations: magnetic flux changes the phase, the phase modifies the interference between the junctions, and this interference affects the current and ultimately the measured voltage.
+
+This is what makes the SQUID such a powerful device: it converts extremely small magnetic signals into measurable electrical quantities through quantum interference.
 }
 
 %------------------------------------------------
