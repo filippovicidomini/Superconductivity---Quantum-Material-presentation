@@ -376,31 +376,37 @@ So the underlying physics is shared, but the engineering objective changes. In o
 \slide{11. Limits and Outlook}
 
 \points{
-\textbf{Limits}
+\textbf{Current limits}
 \begin{itemize}
-\item Cryogenics
-\item Noise and shielding
-\item System complexity
+\item Cryogenic cooling still needed
+\item Magnetic noise and shielding requirements
+\item Cost and system complexity
 \end{itemize}
 
-\textbf{Outlook}
+\textbf{Future outlook}
 \begin{itemize}
-\item High-$T_c$ devices
-\item Simpler cooling
-\item Better integration
+\item High-$T_c$ superconductors
+\item Simpler and more compact cryogenics
+\item Wider real-world deployment
 \end{itemize}
 }
 
 \speech{
-Despite their advantages, superconducting devices also come with important limitations.
+This slide summarizes both the current limitations and the future direction of superconducting technologies.
 
-The first is cryogenics. In most implementations, we still need low temperatures, and this increases cost, complexity, and maintenance requirements.
+On the limitations side, the first and most important issue is cryogenic cooling. Both SQUID sensors and superconducting magnets must operate below a critical temperature, which requires dedicated cooling systems. This increases cost, size, and operational complexity.
 
-In sensing applications, another major issue is environmental noise. Since the signals can be extremely weak, shielding and careful system design become essential.
+A second limitation is magnetic noise. In applications like MEG or buried-metal detection, the signals we want to measure are extremely weak. This means that shielding, calibration, and noise reduction are not optional, but fundamental parts of the system.
 
-There is also a broader engineering challenge: the superconducting element alone is never the whole system. We also need readout electronics, mechanical integration, thermal management, and reliability.
+Finally, there is the broader issue of system complexity. A superconducting device is never standalone: it must be integrated with electronics, thermal management, and mechanical structures, which makes real-world deployment more challenging.
 
-Looking ahead, much of the progress in the field is driven by high-temperature superconductors, simpler cooling solutions, and more compact and robust devices. So the long-term trend is to keep the unique performance of superconducting systems while reducing the practical barriers to their use.
+At the same time, the outlook is very promising. High-temperature superconductors are reducing the need for extreme cooling, making systems easier to operate.
+
+In parallel, cryogenic technology itself is improving, with more compact and reliable cryocoolers replacing large liquid-helium systems.
+
+As a result, these technologies are gradually moving out of specialized laboratories and into wider real-world applications.
+
+So the key idea is that while the physics is already extremely powerful, the main progress now is on the engineering side, making these systems more practical and accessible.
 }
 
 %------------------------------------------------
@@ -408,28 +414,71 @@ Looking ahead, much of the progress in the field is driven by high-temperature s
 \slide{12. Conclusion}
 
 \points{
-Superconductivity →
+\textbf{One physics, two technological routes}
 \begin{itemize}
-\item Create magnetic fields
-\item Detect magnetic fields
+\item Strong magnetic fields
+\item Ultra-sensitive magnetic sensing
 \end{itemize}
 
-Applications:
+\textbf{Applications shown}
 \begin{itemize}
 \item Water treatment
 \item MEG
-\item Metal detection
+\item Buried-metal detection
+\end{itemize}
+
+\textbf{Final message}
+\begin{itemize}
+\item From quantum physics to real-world impact
 \end{itemize}
 }
 
 \speech{
-In conclusion, superconductivity is not only an elegant quantum phenomenon. It is also a technological platform.
+To conclude, the main idea of this talk is that superconductivity is not only an elegant topic in quantum physics, but also a very powerful technological platform.
 
-The same physical principles allow us to do two things extremely well: generate strong magnetic fields and detect extremely weak ones.
+The same underlying physics leads to two complementary routes. One route is the generation of strong magnetic fields through superconducting magnets. The other is the detection of extremely weak magnetic signals through SQUID sensors.
 
-The examples discussed in this talk show these two routes clearly. Water treatment belongs to the strong-field branch, while MEG and buried-metal detection belong to the ultra-sensitive sensing branch.
+The three applications presented today show this clearly. Water treatment belongs to the strong-field branch, because the goal is to create the magnetic force needed for separation. MEG and buried-metal detection belong to the sensing branch, because the goal is to detect signals that would otherwise be too weak to measure.
 
-So the final message is that superconductivity gives us a way to both shape and measure the magnetic world with exceptional precision.
+So, even though these applications look very different, they are connected by the same core idea: superconductivity allows us to control magnetism in ways that conventional technologies often cannot.
+
+And this is why superconducting devices matter: they take a quantum phenomenon and turn it into tools with real scientific, medical, environmental, and technological impact.
+}
+
+
+%------------------------------------------------
+
+\slide{13. References}
+
+\points{
+\textbf{Course material}
+\begin{itemize}
+\item R. Arpaia, Lecture 4 -- Superconductivity: Key Phenomena and Concepts
+\item R. Arpaia, Lecture 7 -- Superconductivity: London Equations (I)
+\item R. Arpaia, Lecture 15 -- The Josephson Effect: Gateway to Superconducting Device Physics (II)
+\item R. Arpaia, Lecture 18 -- Josephson Junction Devices: From Quantum Qubits to SQUIDs in Neuroscience
+\end{itemize}
+
+\textbf{Selected references}
+\begin{itemize}
+\item J. Clarke, ``SQUIDs,'' \textit{Scientific American}
+\item NHMFL, ``Intro to High-Temperature Superconductors -- Magnet Academy''
+\item S. Q. Li et al., ``Application of superconducting HGMS technology on turbid wastewater treatment from converter''
+\item J. Lin, M. Wang, and J. Zhao, ``Progress in SQUID-Based Geophysical Precision Measurement Technology''
+\item M. Pinto et al., ``Application of magnetic nanoparticles for water purification''
+\item S. P. Singh, ``Magnetoencephalography: Basic principles''
+\item ``The Feynman Lectures on Physics,'' Vol. III, Ch. 21
+\end{itemize}
+}
+
+\speech{
+This final slide lists the main sources used for the talk.
+
+The theoretical introduction is mainly based on the course lectures, especially for the core concepts of superconductivity, the London description, the Josephson effect, and SQUID devices.
+
+For the applications, I used representative references on SQUID sensing, high-temperature superconductors, magnetic water purification, geophysical and buried-metal detection, and MEG.
+
+I am not going to discuss these references in detail, but I include them here to show the scientific basis of the material presented in this talk.
 }
 
 \end{document} 
