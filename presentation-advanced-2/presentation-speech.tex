@@ -51,7 +51,11 @@ Title, name, course. Clean background.
 }
 
 \speech{
-Superconductivity is often seen as a very elegant but abstract topic in condensed matter physics. However, the goal of this talk is to show that the same underlying physics can be used in very practical and very different technological contexts. In particular, superconductivity enables two complementary approaches: on one side, it allows us to generate very strong magnetic fields with low dissipation, and on the other side, it allows us to detect extremely weak magnetic signals with very high precision.
+Superconductivity is often introduced as a beautiful but quite abstract topic in condensed matter physics. In this talk, I want to show the opposite perspective: the same physical principles can be turned into very concrete technologies.
+
+In particular, superconductivity opens two complementary routes. On one side, it allows us to generate very strong magnetic fields with very low dissipation. On the other side, it allows us to detect extremely weak magnetic signals with extraordinary precision.
+
+So the main message of the talk is simple: one underlying physics, but two very different device families, leading to very different applications.
 }
 
 %------------------------------------------------
@@ -70,7 +74,11 @@ Applications:
 }
 
 \speech{
-The structure of this talk is intentionally simple. I will start from the basic physical properties of superconductors, then introduce the Josephson effect as the key ingredient for superconducting electronics, and finally show how this leads to two different families of devices. The first family is based on strong magnetic fields, while the second is based on extremely sensitive magnetic sensing using SQUIDs. These two routes will then be illustrated through three concrete applications.
+The structure of the talk is intentionally simple. I will begin with the essential physical properties of superconductors, then move to the Josephson effect, which is the key ingredient for superconducting electronics.
+
+From there, I will show how the same physics leads to two device families. The first is based on producing strong magnetic fields, mainly through superconducting magnets. The second is based on ultra-sensitive magnetic sensing, mainly through SQUIDs.
+
+Finally, I will connect these ideas to three concrete applications: water treatment, magnetoencephalography, and buried-metal detection.
 }
 
 %------------------------------------------------
@@ -86,15 +94,17 @@ The structure of this talk is intentionally simple. I will start from the basic 
 }
 
 \speech{
-A superconductor is not simply a material with very low resistance, but a distinct quantum state of matter that appears below a critical temperature. When the system enters this state, the electrical resistance drops exactly to zero, which means that currents can flow without any energy dissipation. This is already a remarkable property, but it is not the most fundamental one.
+A superconductor is not just a material with very low resistance. It is a distinct quantum state of matter that appears below a critical temperature.
 
-The defining feature of superconductivity is the Meissner effect: magnetic fields are expelled from the interior of the material. This shows that superconductivity is not just perfect conductivity, but a new thermodynamic phase with its own electromagnetic properties.
+The first famous property is zero electrical resistance, meaning that an electric current can flow without dissipation. But this alone is not the full story.
 
-From a microscopic point of view, superconductivity arises from the formation of Cooper pairs, which are bound states of electrons that behave collectively. These pairs condense into a macroscopic quantum state described by a single wavefunction.
+The defining feature is the Meissner effect: magnetic fields are expelled from the interior of the material. This tells us that superconductivity is not simply perfect conductivity, but a new thermodynamic phase with its own electromagnetic behavior.
 
-In many practical materials, known as type-II superconductors, magnetic flux can partially penetrate the material in the form of quantized vortices when the field exceeds a certain threshold. This allows superconductivity to survive even in relatively strong magnetic fields, which is essential for technological applications such as superconducting magnets.
+At the microscopic level, electrons form bound pairs, called Cooper pairs, and these pairs condense into a single collective quantum state. So instead of thinking about many independent electrons, we describe the system with one macroscopic wavefunction.
 
-So the key idea to remember is that superconductivity combines zero resistance, magnetic field expulsion, and macroscopic quantum coherence into a single physical framework.
+In many practical materials, especially type-II superconductors, magnetic flux can still enter in the form of quantized vortices when the external field is high enough. This is extremely important technologically, because it allows superconductivity to survive even in strong magnetic fields.
+
+So the key point to remember is this: superconductivity combines zero resistance, magnetic-field expulsion, and macroscopic quantum coherence in the same physical state.
 }
 
 %------------------------------------------------
@@ -117,17 +127,17 @@ I_s = I_c \sin \varphi
 }
 
 \speech{
-The superconducting state can be described by a macroscopic wavefunction, written as $\psi = |\psi| e^{i\theta}$, where the key new quantity is the phase $\theta$. Unlike in normal conductors, this phase is coherent over macroscopic distances and becomes a physically observable variable.
+The superconducting state can be described by a macroscopic wavefunction, written as $\psi = |\psi| e^{i\theta}$. The important quantity here is the phase $\theta$.
 
-This has a profound consequence: if two superconductors are separated by a very thin insulating barrier, their wavefunctions can overlap, and Cooper pairs can tunnel across the barrier. This phenomenon is known as the Josephson effect.
+In a normal conductor, phase is not something we can use at the macroscopic level. In a superconductor, instead, the phase remains coherent over large distances and becomes physically meaningful.
 
-The first Josephson relation tells us that the supercurrent depends on the phase difference between the two superconductors, $I_s = I_c \sin \varphi$. This means that a purely quantum quantity, the phase, directly controls a measurable current.
+This leads directly to the Josephson effect. If two superconductors are separated by a very thin insulating barrier, Cooper pairs can tunnel from one side to the other.
 
-The second Josephson relation shows that if a voltage is applied across the junction, the phase difference evolves in time, $\frac{d\varphi}{dt} = \frac{2eV}{\hbar}$. So the relation works in both directions: phase controls current, and voltage controls phase.
+The first Josephson relation tells us that the supercurrent depends on the phase difference: $I_s = I_c \sin \varphi$. So a quantum variable, the phase difference, directly controls a measurable current.
 
-This is the key conceptual step: superconductivity is not only about zero resistance, but about macroscopic quantum coherence. The Josephson junction allows us to access and manipulate this phase, turning it into a usable electrical variable.
+The second relation says that if a voltage is applied, the phase difference changes in time, $\frac{d\varphi}{dt} = \frac{2eV}{\hbar}$. So current is linked to phase, and voltage is also linked to phase.
 
-This is exactly what makes devices like SQUIDs possible, because it provides the link between magnetic flux, phase interference, and measurable electrical signals.
+This is the conceptual bridge we need for the rest of the talk. Superconductivity is not only about lossless current transport, but also about controlling a macroscopic quantum phase. And once phase becomes accessible, we can build devices based on interference.
 }
 
 %------------------------------------------------
@@ -147,17 +157,17 @@ This is exactly what makes devices like SQUIDs possible, because it provides the
 }
 
 \speech{
-If we now take two Josephson junctions and place them in a superconducting loop, we obtain a SQUID, which stands for Superconducting Quantum Interference Device. The key idea is that the superconducting phase around the loop cannot vary arbitrarily, but is constrained by flux quantization.
+If we place two Josephson junctions in a superconducting loop, we obtain a SQUID: a Superconducting Quantum Interference Device.
 
-In particular, the total phase change around the loop must be related to the magnetic flux threading the loop. This means that when an external magnetic flux is applied, it directly affects the phase differences across the two Josephson junctions.
+The key idea is that the superconducting phase around the loop cannot vary arbitrarily. Because of flux quantization, the total phase change around the loop is constrained by the magnetic flux threading the loop.
 
-As a result, the two junctions do not act independently, but interfere with each other. This interference modifies the total supercurrent flowing through the device, leading to a periodic dependence of the critical current on the applied magnetic flux.
+So when an external magnetic flux is applied, it changes the phase configuration of the device. The two junctions therefore interfere with each other, and the total critical current becomes a periodic function of magnetic flux.
 
-In practice, the SQUID is biased so that it operates in a region where this dependence is very sensitive. Under these conditions, even a very small change in magnetic flux produces a measurable change in the electrical output, typically a voltage.
+In practice, the device is biased in a regime where this dependence is very steep. Then even a tiny change in magnetic flux produces a measurable change in the electrical output, usually a voltage.
 
-So the essential mechanism is a chain of transformations: magnetic flux changes the phase, the phase modifies the interference between the junctions, and this interference affects the current and ultimately the measured voltage.
+So the chain is the following: magnetic flux changes the phase, the phase changes the interference, and the interference changes the electrical signal.
 
-This is what makes the SQUID such a powerful device: it converts extremely small magnetic signals into measurable electrical quantities through quantum interference.
+This is why the SQUID is such a powerful sensor: it converts extremely small magnetic signals into measurable voltages through quantum interference.
 }
 
 %------------------------------------------------
@@ -167,15 +177,21 @@ This is what makes the SQUID such a powerful device: it converts extremely small
 \points{
 \begin{itemize}
 \item Ultra-high sensitivity
-\item Down to femtotesla
+\item Detects fields far below Earth's background
 \item Passive sensing
 \item Works where other sensors fail
 \end{itemize}
 }
 
 \speech{
-The main reason SQUIDs are so important is their extraordinary sensitivity. They are among the most sensitive magnetometers ever developed, capable of detecting magnetic fields down to the femtotesla range under suitable conditions. This makes them ideal for applications where the signal is extremely weak or where non-invasive measurement is required. In many of these situations, conventional sensors simply do not provide sufficient sensitivity.
+The main reason SQUIDs are so important is their extraordinary sensitivity. They are among the most sensitive magnetometers ever developed.
+
+Under suitable conditions, they can detect magnetic fields down to the femtotesla range. To appreciate how small this is, the Earth's magnetic field is of the order of tens of microtesla, so SQUIDs can detect signals many orders of magnitude weaker than the magnetic background around us.
+
+This makes them essential in applications where the signal is extremely weak, where the measurement must be non-invasive, or where low-frequency performance is crucial. In many of these situations, conventional magnetic sensors are simply not sensitive enough.
 }
+
+%------------------------------------------------
 
 %------------------------------------------------
 
@@ -183,20 +199,46 @@ The main reason SQUIDs are so important is their extraordinary sensitivity. They
 
 \points{
 \begin{itemize}
-\item Brain magnetic fields
-\item Non-invasive
-\item SQUID arrays (~300 sensors)
+\item Neuronal currents → magnetic fields
+\item Signals $\sim 10$--$100$ fT
+\item Non-invasive measurement
+\item SQUID array ($\sim$300 sensors)
 \end{itemize}
 }
 
 \speech{
-Magnetoencephalography is one of the most important real-world applications of SQUID technology. The physical signal comes from neuronal currents in the brain, which generate extremely weak magnetic fields outside the head. These fields are typically in the femtotesla range, which is many orders of magnitude smaller than the Earth’s magnetic field, so very high sensitivity is required.
+Magnetoencephalography, or MEG, is one of the clearest real-world applications of SQUID technology.
 
-The measurement is completely non-invasive: SQUID sensors are arranged in arrays, typically around 200 to 300 sensors, inside a cryogenic dewar that surrounds the patient’s head. Each sensor measures the magnetic field as a function of time, providing excellent temporal resolution on the order of milliseconds.
+The signal originates from neuronal currents in the brain, mainly due to synchronized activity of pyramidal neurons. These currents generate magnetic fields that extend outside the head.
 
-One of the key advantages of MEG compared to other techniques, such as EEG, is that magnetic fields are less distorted by the skull and scalp. This makes it easier to relate the measured signal to the underlying neuronal sources, although reconstructing those sources still requires solving an inverse problem.
+However, these signals are extremely weak, typically in the range of 10 to 100 femtotesla. To give a sense of scale, they are about a billion times smaller than the Earth's magnetic field.
 
-In practice, MEG is used in clinical and research settings, for example to localize epileptic foci before surgery or to map functional areas of the brain. So this application clearly shows why SQUID-level sensitivity is not just interesting, but actually necessary to access otherwise inaccessible biological signals.
+This is exactly where SQUIDs become essential. Their extreme sensitivity allows us to detect these signals in a completely non-invasive way.
+
+In practice, MEG systems use large arrays of SQUID sensors, often around 300 channels, placed inside a cryogenic helmet surrounding the head. The system records brain activity with millisecond temporal resolution, making it ideal for studying fast neural dynamics.
+}
+
+%------------------------------------------------
+
+\slide{7b. MEG System and Advantages}
+
+\points{
+\begin{itemize}
+\item Cryogenic helmet (dewar)
+\item ms temporal resolution
+\item Less distortion than EEG
+\item Better source localization
+\end{itemize}
+}
+
+\speech{
+From a system perspective, MEG relies on a cryogenic environment. The SQUID sensors must be kept at very low temperature, typically using liquid helium, inside what is called a dewar.
+
+One of the main strengths of MEG is its excellent temporal resolution, on the order of milliseconds, which allows us to follow brain activity in real time.
+
+Compared to EEG, magnetic fields are less affected by the skull and scalp. This means that the measured signals are less distorted, and source localization is more direct.
+
+So overall, MEG combines non-invasive measurement, high temporal resolution, and relatively accurate spatial localization, making it a powerful tool both in neuroscience research and in clinical applications such as epilepsy diagnosis.
 }
 
 %------------------------------------------------
@@ -213,15 +255,40 @@ In practice, MEG is used in clinical and research settings, for example to local
 }
 
 \speech{
-This application is based on electromagnetic induction and represents another example of the sensing branch of superconducting technology. The basic idea is to detect buried metallic objects by observing their response to an externally applied magnetic field.
+This application belongs to the sensing branch, but the mechanism is different from MEG. Here the key idea is electromagnetic induction.
 
-A primary excitation coil generates a time-varying magnetic field that penetrates the ground. When this field reaches a metallic object, it induces circulating currents, often called eddy currents, inside the target. These induced currents then generate a secondary magnetic field, which is typically much weaker than the original excitation field.
+A primary coil generates an alternating magnetic field that penetrates the ground. When this field encounters a buried metallic object, it induces circulating currents inside the target, called eddy currents.
 
-The challenge is that this secondary field must be detected in a very noisy environment, where there are many sources of background signals, including the Earth’s magnetic field and environmental electromagnetic noise. This is where SQUID sensors become particularly useful, because of their extremely high sensitivity.
+These eddy currents generate a secondary magnetic field. So the buried object does not simply block the field: it produces its own magnetic response, and this response carries information about the presence, size, and shape of the object.
 
-Another important point is that SQUIDs perform very well at low frequencies. Operating at low frequency allows the primary field to penetrate deeper into the ground and improves the detection of buried objects. This can increase both the detection depth and the selectivity of the system.
+At this point, the natural question is: why are SQUIDs useful here, instead of an ordinary metal detector?
 
-So, similarly to the MEG case, the key requirement here is not generating strong fields, but detecting extremely weak signals with high precision, especially in challenging and noisy conditions.
+The answer is that the secondary field is extremely weak compared both to the excitation field and to the environmental magnetic background. So the real challenge is not generating the signal, but detecting it reliably.
+}
+
+%------------------------------------------------
+
+\slide{8b. Buried-Metal Detection: Why SQUIDs?}
+
+\points{
+\begin{itemize}
+\item Extremely weak secondary field
+\item High sensitivity in the fT range
+\item Low-frequency operation \(\rightarrow\) deeper penetration
+\item UXO and mine detection
+\end{itemize}
+}
+
+\speech{
+This is exactly where SQUID sensors become valuable.
+
+Because of their extremely high sensitivity, they can detect the weak secondary magnetic field produced by the buried target, even in a noisy environment.
+
+Another important advantage is that SQUIDs can operate at low frequencies. This is useful because lower frequencies penetrate deeper into the ground, so the system can detect objects buried at greater depths.
+
+This is why SQUID-based systems are interesting not only for generic metal detection, but also for more demanding applications such as unexploded ordnance detection.
+
+In that context, the goal is not just to say that some metal is present. The system should help distinguish dangerous buried objects from harmless metallic debris, which is one of the reasons why high sensitivity and better signal characterization matter.
 }
 
 %------------------------------------------------
@@ -231,19 +298,53 @@ So, similarly to the MEG case, the key requirement here is not generating strong
 \points{
 \begin{itemize}
 \item Magnetic tagging of pollutants
-\item High-gradient magnetic separation (HGMS)
-\item Need high $B \nabla B$
+\item HGMS as a magnetic filter
+\item Strong local gradients: need high $B \nabla B$
+\item Removal efficiency $>$95\%
 \end{itemize}
 }
 
 \speech{
-This application represents the high-field branch of superconducting technology, rather than the sensing branch based on SQUIDs. The basic problem is that many pollutants in water are not strongly magnetic on their own, so they cannot be separated efficiently just by applying a magnetic field. For this reason, the first step is usually to attach them to magnetic particles or to create magnetically responsive flocs.
+This application shows the strong-field branch of superconductivity.
 
-Once this magnetic tagging has taken place, the water is sent through a high-gradient magnetic separation system, often abbreviated as HGMS. Inside the separator there is a ferromagnetic matrix, for example steel wool or fine wire mesh, placed within the field generated by a superconducting magnet. When the external field is applied, this matrix becomes magnetized and produces very strong local magnetic-field gradients.
+The starting point is that most pollutants are not magnetic, so we cannot remove them directly using a magnetic field.
 
-These gradients are essential, because a magnetic field alone is not enough to produce an efficient capture force. What matters is the magnetic force associated with spatial variations of the field, which is why the relevant quantity is the product $B\nabla B$. Under these conditions, the tagged particles experience a force strong enough to overcome the drag of the flowing fluid and become trapped in the matrix, while the cleaner water continues to pass through.
+To solve this, we first attach pollutants to magnetic particles, typically iron oxide particles or nanoparticles. In this way, contaminants become magnetically responsive.
 
-So the key idea in this application is not ultra-high sensitivity, but the ability to generate strong and stable magnetic fields for continuous operation. This is exactly where superconducting magnets become useful: they make high-field, high-gradient separation much more realistic from an engineering point of view.
+The water is then sent through a high-gradient magnetic separation system, or HGMS. In practical terms, an HGMS system includes an excitation coil, a magnetic yoke, and a separation region containing a ferromagnetic matrix. In some industrial designs, there is also a rotating ring or pulsating mechanism that helps continuous operation and reduces clogging.
+
+Under the action of the water flow, the suspension enters the separator. Inside the magnetic field, the tagged particles are attracted toward the magnetized matrix and form magnetic aggregates, while the non-magnetic part of the flow continues forward.
+
+As the separator rotates or as the flow is periodically flushed, the captured material is carried to a lower-field region and removed. So the process is not only capture, but also continuous collection and discharge of the concentrated waste.
+
+Because of the ferromagnetic structure, very large local field gradients are created. These gradients generate the magnetic force that pulls the tagged particles toward the matrix, while cleaner water continues to flow.
+
+In many practical implementations, removal efficiencies above 95\% are reported, even for very small particles, which makes this technique highly effective for water purification.
+}
+
+%------------------------------------------------
+
+\slide{9b. Water Treatment: Role of Superconductivity}
+
+\points{
+\begin{itemize}
+\item Need strong magnetic field
+\item Create high gradients
+\item Continuous separation
+\item Energy-efficient at scale
+\end{itemize}
+}
+
+\speech{
+The key technological role of superconductivity here is to generate strong and stable magnetic fields.
+
+These strong fields magnetize the iron yoke and the ferromagnetic matrix inside the separator, creating the high-gradient conditions needed for capture. So the important quantity is not only the field itself, but also its spatial variation.
+
+This is why HGMS is more than simply putting water near a magnet. The device must combine field generation, flow control, and an engineered magnetic structure that concentrates the gradients where separation takes place.
+
+Superconducting magnets are especially useful because they can provide these strong fields continuously with low energy dissipation, which is very important for large-scale systems.
+
+So, differently from MEG, where superconductivity is used for sensitivity, here it is used to create the magnetic environment needed to physically separate contaminants from water.
 }
 
 %------------------------------------------------
@@ -252,16 +353,22 @@ So the key idea in this application is not ultra-high sensitivity, but the abili
 
 \points{
 \begin{tabular}{lccc}
-Application & Quantity & Device \\
+Application & Main need & Device \\
 \hline
-MEG & Sensitivity & SQUID \\
-Metal detection & Weak signals & SQUID \\
-Water treatment & Magnetic force & Magnet \\
+MEG & Extreme sensitivity & SQUID \\
+Metal detection & Weak-signal detection & SQUID \\
+Water treatment & Strong magnetic force & Magnet \\
 \end{tabular}
 }
 
 \speech{
-Although these three applications appear very different, they can be understood within the same conceptual framework. In the case of MEG and buried-metal detection, the key quantity is sensitivity to very weak magnetic signals, and this is where SQUIDs are used. In contrast, water treatment relies on strong magnetic forces, which are generated by superconducting magnets. So the distinction is not in the underlying physics, but in the engineering objective.
+Although these three applications look very different, they fit into one simple framework.
+
+In MEG and buried-metal detection, the central requirement is sensitivity to extremely weak magnetic signals. In both cases, the enabling device is the SQUID.
+
+In water treatment, instead, the important quantity is magnetic force, which depends on strong fields and strong gradients. There the enabling technology is the superconducting magnet.
+
+So the underlying physics is shared, but the engineering objective changes. In one case we use superconductivity to measure tiny magnetic signals. In the other, we use it to generate the magnetic conditions needed for separation.
 }
 
 %------------------------------------------------
@@ -285,7 +392,15 @@ Although these three applications appear very different, they can be understood 
 }
 
 \speech{
-Despite their advantages, superconducting devices also come with important challenges. Cryogenic cooling is still required in most cases, which adds complexity and cost. In sensing applications, environmental noise and shielding are critical issues. Moreover, building a complete system involves not only the superconducting element but also electronics, mechanics, and integration. Future developments are focused on high-temperature superconductors, simpler cryogenic systems, and more compact and robust device architectures.
+Despite their advantages, superconducting devices also come with important limitations.
+
+The first is cryogenics. In most implementations, we still need low temperatures, and this increases cost, complexity, and maintenance requirements.
+
+In sensing applications, another major issue is environmental noise. Since the signals can be extremely weak, shielding and careful system design become essential.
+
+There is also a broader engineering challenge: the superconducting element alone is never the whole system. We also need readout electronics, mechanical integration, thermal management, and reliability.
+
+Looking ahead, much of the progress in the field is driven by high-temperature superconductors, simpler cooling solutions, and more compact and robust devices. So the long-term trend is to keep the unique performance of superconducting systems while reducing the practical barriers to their use.
 }
 
 %------------------------------------------------
@@ -308,7 +423,13 @@ Applications:
 }
 
 \speech{
-In conclusion, superconductivity provides a powerful platform that connects fundamental quantum physics with real-world technology. The same underlying principles lead to two main technological routes: generating strong magnetic fields and detecting extremely weak ones. The applications we have discussed illustrate how these two approaches can be adapted to very different problems, while still relying on the same physical foundations.
+In conclusion, superconductivity is not only an elegant quantum phenomenon. It is also a technological platform.
+
+The same physical principles allow us to do two things extremely well: generate strong magnetic fields and detect extremely weak ones.
+
+The examples discussed in this talk show these two routes clearly. Water treatment belongs to the strong-field branch, while MEG and buried-metal detection belong to the ultra-sensitive sensing branch.
+
+So the final message is that superconductivity gives us a way to both shape and measure the magnetic world with exceptional precision.
 }
 
 \end{document} 
