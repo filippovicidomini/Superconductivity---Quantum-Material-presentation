@@ -18,37 +18,29 @@
 \newcommand{\points}[1]{{\color{accent}\textbf{Slide content:}}\\#1}
 \newcommand{\speech}[1]{{\color{accent}\textbf{What to say:}}\\#1}
 
-\title{Superconducting Devices\\
-\large From Strong Magnetic Fields to Ultra-Sensitive Sensing}
-\author{Filippo Vicidomini\\University Ca' Foscari of Venice}
+\title{ \huge Superconducting Devices\\ \vspace{0.3cm}
+\large From Strong Magnetic Fields to Ultra-Sensitive Sensing
+\small \\  \vspace{0.3cm} Superconductivity and Quantum Materials}
+
+\author{Filippo Vicidomini\\ Ca' Foscari University of Venice }
+
 \date{April 2026}
 
 \begin{document}
 \maketitle
 
-\section*{Overview}
 
-\textbf{Core idea:}
-\begin{quote}
-The same superconducting physics leads to two technological routes:
-strong-field magnets and ultra-sensitive SQUID sensors.
-\end{quote}
+\tableofcontents
+% table of points and speech for each slide
 
-\begin{itemize}
-\item minimal theory
-\item SQUID principle
-\item three applications
-\end{itemize}
 
 \newpage
 
 %------------------------------------------------
 
-\slide{1. Title}
+\section{Superconducting Devices: From Strong Magnetic Fields to Ultra-Sensitive Sensing}
+\subsection{Introduction}
 
-\points{
-Title, name, course. Clean background.
-}
 
 \speech{
 Superconductivity is often introduced as a beautiful but quite abstract topic in condensed matter physics. In this talk, I want to show the opposite perspective: the same physical principles can be turned into very concrete technologies.
@@ -60,7 +52,7 @@ So the main message of the talk is simple: one underlying physics, but two very 
 
 %------------------------------------------------
 
-\slide{2. One Physics, Two Device Families}
+\subsection{One Physics, Two Device Families}
 
 \points{
 Superconductivity → High-field magnets / SQUID sensors
@@ -83,7 +75,7 @@ Finally, I will connect these ideas to three concrete applications: water treatm
 
 %------------------------------------------------
 
-\slide{3. What is a Superconductor?}
+\subsection{What is a Superconductor?}
 
 \points{
 \begin{itemize}
@@ -100,16 +92,41 @@ The first famous property is zero electrical resistance, meaning that an electri
 
 The defining feature is the Meissner effect: magnetic fields are expelled from the interior of the material. This tells us that superconductivity is not simply perfect conductivity, but a new thermodynamic phase with its own electromagnetic behavior.
 
-At the microscopic level, electrons form bound pairs, called Cooper pairs, and these pairs condense into a single collective quantum state. So instead of thinking about many independent electrons, we describe the system with one macroscopic wavefunction.
-
 In many practical materials, especially type-II superconductors, magnetic flux can still enter in the form of quantized vortices when the external field is high enough. This is extremely important technologically, because it allows superconductivity to survive even in strong magnetic fields.
 
-So the key point to remember is this: superconductivity combines zero resistance, magnetic-field expulsion, and macroscopic quantum coherence in the same physical state.
+So the key point to remember here is this: superconductivity combines zero resistance, magnetic-field expulsion, and quantized magnetic behavior in the same physical state. The next question is why matter reorganizes itself in this way at the quantum level.
 }
 
 %------------------------------------------------
 
-\slide{4. Macroscopic Phase and Josephson Effect}
+\subsubsection{What Changes at the Quantum Level?}
+
+\points{
+\begin{itemize}
+\item In a normal metal, electrons scatter independently
+\item Below \(T_c\), electrons form Cooper pairs
+\item Pairs condense into one coherent quantum state
+\item An energy gap \(\Delta\) protects the condensate
+\end{itemize}
+}
+
+\speech{
+This is the microscopic transition behind superconductivity.
+
+In an ordinary metal, electrons behave mostly as independent particles. As they move through the crystal, they scatter off lattice vibrations, defects, and other excitations, and this scattering is what produces electrical resistance.
+
+Below the critical temperature, the situation changes. An effective attractive interaction, usually mediated by lattice vibrations, allows electrons near the Fermi surface to form bound pairs, called Cooper pairs. Each pair contains two electrons with opposite momentum and opposite spin.
+
+These pairs do not act like isolated molecules. A macroscopic number of them condenses into the same collective quantum state, so the material develops long-range coherence.
+
+At the same time, an energy gap opens in the excitation spectrum. This means that small perturbations are no longer enough to break pairs or scatter the condensate in the usual way.
+
+So the matter is reorganized at the quantum level: instead of many independent electrons, we have a coherent condensate of paired electrons. This microscopic change is what later gives us zero resistance, flux quantization, and the Josephson effect.
+}
+
+%------------------------------------------------
+
+\subsection{Macroscopic Phase and Josephson Effect}
 
 \points{
 \[
@@ -127,7 +144,7 @@ I_s = I_c \sin \varphi
 }
 
 \speech{
-The superconducting state can be described by a macroscopic wavefunction, written as $\psi = |\psi| e^{i\theta}$. The important quantity here is the phase $\theta$.
+Once this coherent condensate exists, the superconducting state can be described by a macroscopic wavefunction, written as $\psi = |\psi| e^{i\theta}$. The important quantity here is the phase $\theta$.
 
 In a normal conductor, phase is not something we can use at the macroscopic level. In a superconductor, instead, the phase remains coherent over large distances and becomes physically meaningful.
 
@@ -142,7 +159,7 @@ This is the conceptual bridge we need for the rest of the talk. Superconductivit
 
 %------------------------------------------------
 
-\slide{5. From Josephson Junction to SQUID}
+\subsection{From Josephson Junction to SQUID}
 
 \points{
 \begin{itemize}
@@ -172,7 +189,7 @@ This is why the SQUID is such a powerful sensor: it converts extremely small mag
 
 %------------------------------------------------
 
-\slide{6. Why SQUIDs Matter}
+\subsection{Why SQUIDs Matter}
 
 \points{
 \begin{itemize}
@@ -195,7 +212,8 @@ This makes them essential in applications where the signal is extremely weak, wh
 
 %------------------------------------------------
 
-\slide{7. Application: MEG}
+\section{Applications}
+\subsection{Magnetoencephalography (MEG)}
 
 \points{
 \begin{itemize}
@@ -220,7 +238,7 @@ In practice, MEG systems use large arrays of SQUID sensors, often around 300 cha
 
 %------------------------------------------------
 
-\slide{7b. MEG System and Advantages}
+\subsubsection{MEG System and Advantages}
 
 \points{
 \begin{itemize}
@@ -243,7 +261,7 @@ So overall, MEG combines non-invasive measurement, high temporal resolution, and
 
 %------------------------------------------------
 
-\slide{8. Application: Buried-Metal Detection}
+\subsection{Buried-Metal Detection}
 
 \points{
 \begin{itemize}
@@ -268,7 +286,7 @@ The answer is that the secondary field is extremely weak compared both to the ex
 
 %------------------------------------------------
 
-\slide{8b. Buried-Metal Detection: Why SQUIDs?}
+\subsubsection{Buried-Metal Detection: Why SQUIDs?}
 
 \points{
 \begin{itemize}
@@ -293,7 +311,7 @@ In that context, the goal is not just to say that some metal is present. The sys
 
 %------------------------------------------------
 
-\slide{9. Application: Water Treatment}
+\subsection{Water Treatment}
 
 \points{
 \begin{itemize}
@@ -324,7 +342,7 @@ In many practical implementations, removal efficiencies above 95\% are reported,
 
 %------------------------------------------------
 
-\slide{9b. Water Treatment: Role of Superconductivity}
+\subsubsection{Water Treatment: Role of Superconductivity}
 
 \points{
 \begin{itemize}
@@ -349,7 +367,7 @@ So, differently from MEG, where superconductivity is used for sensitivity, here 
 
 %------------------------------------------------
 
-\slide{10. Comparison}
+\subsection{Comparison}
 
 \points{
 \begin{tabular}{lccc}
@@ -373,7 +391,7 @@ So the underlying physics is shared, but the engineering objective changes. In o
 
 %------------------------------------------------
 
-\slide{11. Limits and Outlook}
+\section{Limits and Outlook}
 
 \points{
 \textbf{Current limits}
@@ -411,7 +429,7 @@ So the key idea is that while the physics is already extremely powerful, the mai
 
 %------------------------------------------------
 
-\slide{12. Conclusion}
+\section{Conclusion}
 
 \points{
 \textbf{One physics, two technological routes}
@@ -448,7 +466,7 @@ And this is why superconducting devices matter: they take a quantum phenomenon a
 
 %------------------------------------------------
 
-\slide{13. References}
+\section{References}
 
 \points{
 \textbf{Course material}
